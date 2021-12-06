@@ -1,3 +1,1 @@
-# front-alura-challenge
-
-Alura challenges - Front-end edition
+# Alura challenges - Front-end edition
