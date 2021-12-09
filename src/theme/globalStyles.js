@@ -10,7 +10,12 @@ const GlobalStyle = createGlobalStyle`
         --blue-300: #5081fb;
         --blue-200: #7ba4fc;
         --blue-100: #96b9fd;
+        --light-blue: #6bd1ff;
         --white: #ffffff;
+        --mac-red: #FF5F56;
+        --mac-yellow: #FFBD2E;
+        --mac-green: #27C93F;
+        --codebox-color: #141414; 
         --offset-white: rgba(255, 255, 255, 0.16);
         --offset-white-hover-8: rgba(255, 255, 255, 0.08);
         --offset-white-hover-24: rgba(255, 255, 255, 0.24);
@@ -141,6 +146,7 @@ const GlobalStyle = createGlobalStyle`
         flex-flow: row nowrap;
         gap: 16px;
         align-items: center;
+        flex-grow: 1;
     }
     .primary-menu-item-icon{
         color: var(--white);
@@ -164,7 +170,72 @@ const GlobalStyle = createGlobalStyle`
     .primary-icon-opacity:pressed{
         opacity: 1;
     }
+    .codebox-bg{
+        background-color: var(--light-blue);
+        border-radius: 8px;
+        flex-grow: 2;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .codebox{
+        background-color: var(--codebox-color);
+        display: flex;
+        flex-flow: column nowrap;
+        margin: 32px;
+        flex-grow: 1;
+        border-radius: 8px;
+    }
+    .codebox-options{
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 8px;
+        margin: 16px 0px 0px 16px;
+    }
+    .exit-btn,.minimize-btn,.expand-btn{
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        border: 0;
+    }
+    .exit-btn{
+        background-color: var(--mac-red);
+    }
+    .minimize-btn{
+        background-color: var(--mac-yellow);
+    }
+    .expand-btn{
+        background-color: var(--mac-green);
+    }
+    .codebox-text-font{
+        font-family: Roboto Mono;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        color: var(--white);
+    }
+    .codebox-text, .codebox-text:hover, .codebox-text:focus, .codebox-text:focus-visible{
+        background-color: var(--codebox-color);
+        resize: none;
+        margin: 24px 16px 16px 16px;
+        flex-grow: 1;
+        color: var(--white);
+    }
+
+    .codebox-text::-webkit-scrollbar {
+        width: 1em;
+    }
     
+    .codebox-text::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    }
+    
+    .codebox-text::-webkit-scrollbar-thumb {
+        background-color: var(--dark-blue);
+        outline: 1px solid var(--offset-white);
+        shape-outside: border-box;
+        border-radius: 8px;
+    }
 `;
 
 export default GlobalStyle;

@@ -22,7 +22,7 @@
 }
 
 .search-input {
-    width: 80%;
+    width: inherit;
 }
 
 @media (min-width: 343px) {
@@ -35,6 +35,9 @@
 }
 
 @media (min-width: 768px) {
+    .menu-bar {
+        gap: 40px;
+    }
     .mobile-bars {
         display: none;
     }
