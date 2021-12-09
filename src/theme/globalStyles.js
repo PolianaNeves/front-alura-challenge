@@ -81,9 +81,7 @@ const GlobalStyle = createGlobalStyle`
         border-radius: 5px;
         padding: 10px;
     }
-    input:hover,select:hover,textarea:hover{
-        background-color: var(--offset-white-hover-24); 
-    }
+    input:hover,select:hover,textarea:hover,
     input:focus,select:focus,textarea:focus{
         background-color: var(--offset-white-hover-24); 
     }

@@ -9,4 +9,11 @@
     display: flex;
     flex-flow: column wrap;
     gap: 40px;
+    justify-items: center;
+}
+
+@media (max-width: 768px) {
+    .code-editor-sidebar {
+        width: inherit;
+    }
 }
