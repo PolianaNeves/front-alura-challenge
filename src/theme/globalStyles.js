@@ -10,10 +10,10 @@ const GlobalStyle = createGlobalStyle`
         --blue-300: #5081fb;
         --blue-200: #7ba4fc;
         --blue-100: #96b9fd;
+        --white: #ffffff;
         --offset-white: rgba(255, 255, 255, 0.16);
         --offset-white-hover-8: rgba(255, 255, 255, 0.08);
         --offset-white-hover-24: rgba(255, 255, 255, 0.24);
-        --white: #ffffff;
         --placeholder-text: rgba(255,255,255,0.64);
         height: 100%;
     }
@@ -41,37 +41,55 @@ const GlobalStyle = createGlobalStyle`
     .hide-element{
         display: none;
     }
-    button.filled{
+    .button-filled-font{
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--dark-blue);
+    }
+    .button-filled{
         background-color: var(--blue-300);
         color: #000;
         padding: 16px;
         border-radius: 8px;
+        border: 0;
     }
-    button.filled:hover{
+    .button-filled:hover{
         background-color: var(--blue-200);
     }
-    button.filled:pressed{
+    .button-filled:pressed{
         background-color: var(--blue-200);
         stroke: var(--blue-300);
         stroke-width: 4px;
     }
-    button.filled:focus{
+    .button-filled:focus{
         background-color: var(--blue-100);
     }
-    button.outlined{
+    .button-outlined-font{
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--white);
+    }
+    .button-outlined{
         background-color: rgba(80,129,251,0.08);
         color: var(--white);
         padding: 16px;
+        border: 0;
     }
-    button.outlined:hover{
+    .button-outlined:hover{
         background-color: rgba(80,129,251,0.16);
     }
-    button.outlined:pressed{
+    .button-outlined:pressed{
         background-color: rgba(80,129,251,0.16);
         stroke: rgba(80,129,251,0.24);
         stroke-width: 4px;
     }
-    button.outlined:focus{
+    .button-outlined:focus{
         background-color: rgba(80,129,251,0.24);
     }
     input,select,textarea{
@@ -99,7 +117,6 @@ const GlobalStyle = createGlobalStyle`
         color: var(--white);
     }
     .body-font{
-        height: 24px;
         font-family: Inter;
         font-style: normal;
         font-weight: normal;
