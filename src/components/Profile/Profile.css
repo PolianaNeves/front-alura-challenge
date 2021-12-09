@@ -1,0 +1,12 @@
+.profile-box {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+}
+
+.profile-box:hover {
+    background-color: var(--offset-white-hover-8);
+    border-radius: 8px;
+}

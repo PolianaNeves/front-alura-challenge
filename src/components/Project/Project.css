@@ -1,0 +1,11 @@
+.project-fields {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 16px;
+}
+
+@media (max-height: 768px) {
+    .project-section {
+        flex-grow: 2;
+    }
+}
