@@ -7,7 +7,8 @@ describe("CodeBox", () => {
         codeBoxTextArea,
         exitButton,
         minimizeButton,
-        expandButton;
+        expandButton,
+        highlightBtn;
 
     beforeEach(() => {
         render(<CodeBox />);
@@ -17,6 +18,7 @@ describe("CodeBox", () => {
         exitButton = screen.queryByTestId("exit-btn");
         minimizeButton = screen.queryByTestId("minimize-btn");
         expandButton = screen.queryByTestId("expand-btn");
+        highlightBtn = screen.queryByTestId("highlight-btn");
     });
 
     test("should render component without error", () => {
@@ -26,5 +28,6 @@ describe("CodeBox", () => {
         expect(exitButton).toBeInTheDocument();
         expect(minimizeButton).toBeInTheDocument();
         expect(expandButton).toBeInTheDocument();
+        expect(highlightBtn).toBeInTheDocument();
     });
 });

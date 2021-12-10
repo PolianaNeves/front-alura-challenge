@@ -34,8 +34,8 @@ const GlobalStyle = createGlobalStyle`
         height: 100%;
         background-color: var(--dark-blue);
     }
-    ::placeholder{
-        color: var(--placeholder-text);
+    ::placeholder, .select-font{
+        color: var(--placeholder-text) !important;
     }
     ul{
         list-style: none;
@@ -81,18 +81,19 @@ const GlobalStyle = createGlobalStyle`
         color: var(--white);
     }
     .button-outlined{
-        background-color: rgba(80,129,251,0.08);
+        background-color: rgba(80, 129, 251, 0.08);
         color: var(--white);
         padding: 16px;
         border: 0;
+        border-radius: 8px;
     }
     .button-outlined:hover{
         background-color: rgba(80,129,251,0.16);
     }
     .button-outlined:pressed{
-        background-color: rgba(80,129,251,0.16);
-        stroke: rgba(80,129,251,0.24);
-        stroke-width: 4px;
+        background-color: rgba(80, 129, 251, 0.16);
+        border: 4px solid rgba(80, 129, 251, 0.24);
+        border-radius: 8px; 
     }
     .button-outlined:focus{
         background-color: rgba(80,129,251,0.24);

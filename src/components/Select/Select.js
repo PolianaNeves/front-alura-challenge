@@ -30,7 +30,7 @@ export default function Select(props) {
                     disabled
                     value={fieldLabel || chosen}
                     data-testid="placeholder-input"
-                    className={"placeholder-input"}
+                    className={"placeholder-input body-font select-font"}
                 />
                 <FontAwesomeIcon
                     icon={faAngleDown}
@@ -48,6 +48,7 @@ export default function Select(props) {
                                 name="input"
                                 type="text"
                                 key={index}
+                                className={"body-font select-font"}
                                 onClick={() => handleItemClick(option.label)}
                                 value={fieldLabel || option.label}
                                 readOnly
