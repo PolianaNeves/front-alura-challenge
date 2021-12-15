@@ -13,6 +13,8 @@ export default function CustomOptions(props) {
 
     const changeColor = () => {
         setPickedColor(document.getElementById("color-input").value);
+        const codeBoxBg = document.getElementById("codebox-bg");
+        if (codeBoxBg) codeBoxBg.style.backgroundColor = pickedColor;
     };
 
     return (
