@@ -5,7 +5,13 @@
 }
 
 @media (max-height: 768px) {
-    .project-section {
+    .project-side-menu {
         flex-grow: 2;
     }
+}
+
+.project-side-menu {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 16px;
 }

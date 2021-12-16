@@ -1,28 +1,30 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import Project from "./Project";
+import ProjectSideMenu from "./ProjectSideMenu";
 
-describe("Project", () => {
+describe("ProjectSideMenu", () => {
     const project = {
         title: "project example",
         description: "example of description",
     };
-    let projectSectionTitle, projectTitle, projectDescription;
+    let projectSectionTitle, projectTitle, projectDescription, submitBtn;
     const setUp = () => {
         projectSectionTitle = screen.queryByText("seu projeto");
         projectTitle = screen.queryByLabelText("project-title");
         projectDescription = screen.queryByTestId("project-description");
+        submitBtn = screen.queryByText("Salvar projeto");
     };
 
     test("should render component without error", () => {
-        render(<Project project={project} />);
+        render(<ProjectSideMenu project={project} />);
         setUp();
         expect(projectSectionTitle).toBeInTheDocument();
         expect(projectTitle).toBeInTheDocument();
         expect(projectDescription).toBeInTheDocument();
+        expect(submitBtn).toBeInTheDocument();
     });
 
     test("should display project info if not empty", () => {
-        render(<Project project={project} />);
+        render(<ProjectSideMenu project={project} />);
         setUp();
         fireEvent.change(projectTitle, { target: { value: project.title } });
         expect(projectTitle.value).toBe(project.title);
@@ -33,7 +35,7 @@ describe("Project", () => {
     });
 
     test("should display empty fields when there is no values in the project", () => {
-        render(<Project project={null} />);
+        render(<ProjectSideMenu project={null} />);
         setUp();
         expect(projectTitle.value).toBe("");
         expect(projectDescription.value).toBe("");

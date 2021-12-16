@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import "./Project.css";
+import CustomOptions from "../CustomOptions/CustomOptions";
+import "./ProjectSideMenu.css";
 
-export default function Project(props) {
+export default function ProjectSideMenu(props) {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     useEffect(() => {
@@ -16,7 +17,7 @@ export default function Project(props) {
         return e.currentTarget.value;
     };
     return (
-        <section className={"project-section"}>
+        <section className={"project-side-menu"}>
             <h1 className={"sidebar-title-font"}>seu projeto</h1>
             <div className={"project-fields"}>
                 <input
@@ -38,6 +39,15 @@ export default function Project(props) {
                     className={"body-font"}
                 />
             </div>
+
+            <CustomOptions />
+
+            <button
+                type="submit"
+                className={"button-filled button-filled-font"}
+            >
+                Salvar projeto
+            </button>
         </section>
     );
 }

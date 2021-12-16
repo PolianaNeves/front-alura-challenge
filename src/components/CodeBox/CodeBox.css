@@ -1,8 +1,18 @@
 .codebox-section {
     flex-grow: 1;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    gap: 40px;
 }
 
-.highlight-btn {
-    margin-top: 32px;
-    width: 100%;
+.code-editor-section {
+    flex-grow: 12;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 16px;
+}
+
+.side-menu-section {
+    flex-grow: 1;
 }
