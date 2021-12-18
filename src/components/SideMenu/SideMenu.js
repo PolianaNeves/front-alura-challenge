@@ -2,6 +2,9 @@ import { faCode, faUsers } from "@fortawesome/free-solid-svg-icons";
 import "./SideMenu.css";
 import SideItem from "../SideItem/SideItem";
 import Profile from "../Profile/Profile";
+import profilePhoto from "../../assets/profile-photo.png";
+
+const user = { photo: profilePhoto, name: "Harry" };
 
 const items = [
     {
@@ -31,7 +34,7 @@ export default function SideMenu(props) {
             </ul>
             <div className={"mobile-profile"}>
                 <hr />
-                <Profile />
+                <Profile user={user} />
             </div>
         </div>
     );

@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
     body{
         margin: 32px;
     }
-    @media (max-width: 375px){
+    @media (max-width: 768px){
         body{
             margin: 16px;
         }
@@ -170,72 +170,6 @@ const GlobalStyle = createGlobalStyle`
     }
     .primary-icon-opacity:pressed{
         opacity: 1;
-    }
-    .codebox-bg{
-        background-color: var(--light-blue);
-        border-radius: 8px;
-        flex-grow: 2;
-        display: flex;
-        flex-flow: column nowrap;
-    }
-    .codebox{
-        background-color: var(--codebox-color);
-        display: flex;
-        flex-flow: column nowrap;
-        margin: 32px;
-        flex-grow: 1;
-        border-radius: 8px;
-    }
-    .codebox-options{
-        display: flex;
-        flex-flow: row nowrap;
-        gap: 8px;
-        margin: 16px 0px 0px 16px;
-    }
-    .exit-btn,.minimize-btn,.expand-btn{
-        border-radius: 50%;
-        width: 12px;
-        height: 12px;
-        border: 0;
-    }
-    .exit-btn{
-        background-color: var(--mac-red);
-    }
-    .minimize-btn{
-        background-color: var(--mac-yellow);
-    }
-    .expand-btn{
-        background-color: var(--mac-green);
-    }
-    .codebox-text-font{
-        font-family: Roboto Mono;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 18px;
-        color: var(--white);
-    }
-    .codebox-text, .codebox-text:hover, .codebox-text:focus, .codebox-text:focus-visible{
-        background-color: var(--codebox-color);
-        resize: none;
-        margin: 24px 16px 16px 16px;
-        flex-grow: 1;
-        color: var(--white);
-    }
-
-    .codebox-text::-webkit-scrollbar {
-        width: 1em;
-    }
-    
-    .codebox-text::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    }
-    
-    .codebox-text::-webkit-scrollbar-thumb {
-        background-color: var(--dark-blue);
-        outline: 1px solid var(--offset-white);
-        shape-outside: border-box;
-        border-radius: 8px;
     }
 `;
 

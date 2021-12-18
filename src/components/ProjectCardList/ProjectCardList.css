@@ -1,0 +1,9 @@
+.community-projects {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 24px;
+}
+
+.community-project {
+    flex-grow: 4;
+}

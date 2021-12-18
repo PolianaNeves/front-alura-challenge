@@ -6,7 +6,7 @@ export default function CodeBox(props) {
     return (
         <section className={"codebox-section"}>
             <div className={"code-editor-section"}>
-                <ProjectCard />
+                <ProjectCard readOnly={false} project={null} />
                 <button
                     type="button"
                     data-testid="highlight-btn"
