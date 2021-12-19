@@ -54,7 +54,7 @@ describe("ProjectCard", () => {
         expect(commentCount).toBeInTheDocument();
         const likesCount = screen.queryByTestId("likes-count");
         expect(likesCount).toBeInTheDocument();
-        const projectAuthor = screen.queryByText(project.author);
+        const projectAuthor = screen.queryByText(`@ ${project.author}`);
         expect(projectAuthor).toBeInTheDocument();
     });
 });
