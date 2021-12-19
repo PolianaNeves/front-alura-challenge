@@ -64,30 +64,28 @@ export default function ProjectCard(props) {
                         <div className="community-reaction">
                             <div
                                 data-testid="comment-count"
-                                className={"comment-count"}
+                                className={"comment-item"}
                             >
                                 <FontAwesomeIcon
                                     icon={faComment}
                                     size="lg"
-                                    className={"comment-icon"}
                                 />
                                 <p className="body-font">9</p>
                             </div>
                             <div
-                                className={"likes-count"}
                                 data-testid="likes-count"
+                                className={"favorite-item"}
                             >
                                 <FontAwesomeIcon
                                     icon={faHeart}
                                     size="lg"
-                                    className={"likes-icon"}
                                 />
                                 <p className="body-font">9</p>
                             </div>
                         </div>
                         {user && (
                             <div className="project-author">
-                                <Profile user={user} />
+                                <Profile showIcon={true} user={user} />
                             </div>
                         )}
                     </div>

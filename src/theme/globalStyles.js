@@ -171,6 +171,20 @@ const GlobalStyle = createGlobalStyle`
     .primary-icon-opacity:pressed{
         opacity: 1;
     }
+    .comment-item, .favorite-item{
+        display: flex;
+        flex-flow: row nowrap;
+        padding: 8px;
+        gap: 8px;
+        color: var(--white);
+    }
+    .comment-item:hover, .favorite-item:hover{
+        border-radius: 16px;
+        background-color: var(--offset-white-hover-8); 
+    }
+    .comment-item:hover, .favorite-item:hover{
+        background-color: var(--offset-white); 
+    } 
 `;
 
 export default GlobalStyle;

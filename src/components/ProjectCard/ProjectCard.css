@@ -1,5 +1,7 @@
 .project-card {
     flex-grow: 2;
+    background-color: rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
 }
 
 .codebox-bg {
@@ -98,9 +100,7 @@
 }
 
 .community-reaction,
-.details-footer,
-.comment-count,
-.likes-count {
+.details-footer{
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -108,15 +108,5 @@
 
 .details-footer {
     justify-content: space-between;
-}
-
-.comment-count,
-.likes-count {
-    padding: 8px;
-}
-
-.likes-icon,
-.comment-icon {
-    color: var(--white);
-    margin-right: 10px;
+    margin-bottom: 24px;
 }
