@@ -6,6 +6,7 @@ export default function ProjectSideMenu(props) {
     const [pickedColor, setPickedColor] = useState("#6BD1FF");
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
+    const [language, setLanguage] = useState("");
 
     const languageOptions = [
         { value: "javascript", label: "JavaScript" },
@@ -18,6 +19,7 @@ export default function ProjectSideMenu(props) {
             setTitle(props.project.name);
             setDescription(props.project.description);
             setPickedColor(props.project.backgroundColor);
+            setLanguage(props.project.language);
         }
     }, [props.project, title, description]);
 
@@ -63,6 +65,7 @@ export default function ProjectSideMenu(props) {
                         options={languageOptions}
                         placeholder={"Selecione a linguagem..."}
                         className={"select"}
+                        language={language}
                     />
                     <input
                         id="color-input"

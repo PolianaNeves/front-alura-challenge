@@ -1,5 +1,5 @@
 import "./Select.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -22,6 +22,12 @@ export default function Select(props) {
         document.getElementById("items").className = "hide-items";
         setChosen(chosenItem);
     };
+
+    useEffect(() => {
+        if(props.language && 
+            props.options.filter(option => option.label === props.language).length > 0)
+            setChosen(props.language);
+    }, [chosen, props.options, props.language])
 
     return (
         <div className={"select"} data-testid="select">

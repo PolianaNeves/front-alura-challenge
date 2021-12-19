@@ -3,10 +3,10 @@ import profilePhoto from "../../assets/profile-photo.png";
 
 const projects = [
     {
-        name: "Python",
+        name: "JavaScript",
         description: "Learn Python!",
         codeSnippet: "def some_function:",
-        language: "python",
+        language: "JavaScript",
         backgroundColor: "#FFFFFF",
         author: "Harry",
         authorPhoto: profilePhoto,

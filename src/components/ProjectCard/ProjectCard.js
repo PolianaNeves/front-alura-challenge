@@ -31,9 +31,11 @@ export default function ProjectCard(props) {
                 name: props.project.name,
                 description: props.project.description,
                 codeSnippet: codeSnippet,
+                language: props.project.language,
                 backgroundColor: bgColor,
-                author: user.author,
-                authorPhoto: user.authorPhoto
+                author: user.name,
+                authorPhoto: user.photo,
+                showDetails: false
             }
             navigate("/", {state: project});
         }
