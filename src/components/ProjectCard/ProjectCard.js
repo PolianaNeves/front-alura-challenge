@@ -3,8 +3,10 @@ import Profile from "../Profile/Profile";
 import "./ProjectCard.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from 'react-router';
 
 export default function ProjectCard(props) {
+    const navigate = useNavigate();
     const [codeSnippet, setCodeSnippet] = useState("");
     const [bgColor, setBgColor] = useState("");
     const [user, setUser] = useState(null);
@@ -23,8 +25,21 @@ export default function ProjectCard(props) {
             setUser(user);
         }
     }, [codeSnippet, props.project]);
+    const handleClick = () => {
+        if(props.project){
+            const project = {
+                name: props.project.name,
+                description: props.project.description,
+                codeSnippet: codeSnippet,
+                backgroundColor: bgColor,
+                author: user.author,
+                authorPhoto: user.authorPhoto
+            }
+            navigate("/", {state: project});
+        }
+    }
     return (
-        <section className={"project-card"}>
+        <section className={"project-card"} onClick={() => handleClick()}>
             <div
                 id="codebox-bg"
                 data-testid="codebox-bg"
@@ -54,7 +69,7 @@ export default function ProjectCard(props) {
                     />
                 </div>
             </div>
-            {props.project && (
+            {(props.project && props.project.showDetails) && (
                 <div className="project-details" data-testid="project-details">
                     <h1 className={"title-font"}>{props.project.name}</h1>
                     <p className={"body-font body-details-opacity"}>

@@ -3,15 +3,24 @@ import ProjectSideMenu from "./ProjectSideMenu";
 
 describe("ProjectSideMenu", () => {
     const project = {
-        title: "project example",
-        description: "example of description",
+        name: "Python",
+        description: "Learn Python!",
+        codeSnippet: "def some_function:",
+        language: "python",
+        backgroundColor: "#FFFFFF",
+        author: "Harry",
+        authorPhoto: "",
+        showDetails: true
     };
-    let projectSectionTitle, projectTitle, projectDescription, submitBtn;
+    let projectSectionTitle, projectTitle, projectDescription, submitBtn, customOptionsTitle, optionsFields, colorInput;
     const setUp = () => {
         projectSectionTitle = screen.queryByText("seu projeto");
         projectTitle = screen.queryByLabelText("project-title");
         projectDescription = screen.queryByTestId("project-description");
         submitBtn = screen.queryByText("Salvar projeto");
+        customOptionsTitle = screen.queryByText("personalização");
+        optionsFields = screen.queryByTestId("options-fields");
+        colorInput = screen.queryByTestId("color-input");
     };
 
     test("should render component without error", () => {
@@ -21,13 +30,16 @@ describe("ProjectSideMenu", () => {
         expect(projectTitle).toBeInTheDocument();
         expect(projectDescription).toBeInTheDocument();
         expect(submitBtn).toBeInTheDocument();
+        expect(customOptionsTitle).toBeInTheDocument();
+        expect(optionsFields).toBeInTheDocument();
+        expect(colorInput).toBeInTheDocument();
     });
 
     test("should display project info if not empty", () => {
         render(<ProjectSideMenu project={project} />);
         setUp();
-        fireEvent.change(projectTitle, { target: { value: project.title } });
-        expect(projectTitle.value).toBe(project.title);
+        fireEvent.change(projectTitle, { target: { value: project.name } });
+        expect(projectTitle.value).toBe(project.name);
         fireEvent.change(projectDescription, {
             target: { value: project.description },
         });
@@ -39,5 +51,12 @@ describe("ProjectSideMenu", () => {
         setUp();
         expect(projectTitle.value).toBe("");
         expect(projectDescription.value).toBe("");
+    });
+
+    test("should display correct color when picked in color input", () => {
+        render(<ProjectSideMenu/>);
+        setUp();
+        fireEvent.change(colorInput, { target: { value: "#ffffff" } });
+        expect(colorInput.value).toBe("#ffffff");
     });
 });

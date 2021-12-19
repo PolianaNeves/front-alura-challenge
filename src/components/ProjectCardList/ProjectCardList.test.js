@@ -1,28 +1,35 @@
 import { render, screen } from "@testing-library/react";
+import { BrowserRouter } from 'react-router-dom';
 import ProjectCardList from "./ProjectCardList";
 
 describe("ProjectCardList", () => {
     const projects = [
         {
-            name: "Html 5",
-            description: "Learn HTML 5!",
-            codeSnippet: "<h1>Exemplo</h1>",
-            language: "html",
+            name: "Python",
+            description: "Learn Python!",
+            codeSnippet: "def some_function:",
+            language: "python",
             backgroundColor: "#FFFFFF",
+            author: "Harry",
+            authorPhoto: "",
+            showDetails: true
         },
         {
-            name: "Js",
-            description: "Learn javascript!",
-            codeSnippet: "function example() {}",
+            name: "JS",
+            description: "Learn js!",
+            codeSnippet: "function example(){}",
             language: "js",
-            backgroundColor: "#5b6h5a",
-        },
+            backgroundColor: "#FFFFFF",
+            author: "Harry",
+            authorPhoto: "",
+            showDetails: true
+        }
     ];
 
     let communityProjects;
 
     beforeEach(() => {
-        render(<ProjectCardList projects={projects} />);
+        render(<BrowserRouter><ProjectCardList projects={projects} /></BrowserRouter>);
         communityProjects = screen.queryByTestId("community-projects");
     });
 

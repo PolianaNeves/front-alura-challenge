@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import { BrowserRouter } from 'react-router-dom';
 import ProjectCard from "./ProjectCard";
 
 describe("ProjectCard", () => {
@@ -10,6 +11,7 @@ describe("ProjectCard", () => {
         backgroundColor: "#FFFFFF",
         author: "Harry",
         authorPhoto: "",
+        showDetails: true
     };
 
     let codeBoxBackground,
@@ -31,7 +33,7 @@ describe("ProjectCard", () => {
     };
 
     test("should render component without error", () => {
-        render(<ProjectCard readOnly={false} project={null} />);
+        render(<BrowserRouter><ProjectCard readOnly={false} project={null} /></BrowserRouter>);
         setUp();
         expect(codeBoxBackground).toBeInTheDocument();
         expect(codeBox).toBeInTheDocument();
@@ -43,7 +45,7 @@ describe("ProjectCard", () => {
     });
 
     test("should render project details", () => {
-        render(<ProjectCard readOnly={true} project={project} />);
+        render(<BrowserRouter><ProjectCard readOnly={true} project={project} /></BrowserRouter>);
         setUp();
         expect(projectDetails).toBeInTheDocument();
         const projectTitle = screen.queryByText(project.name);
