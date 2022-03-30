@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Select from '../Select/Select';
+import Select from './Select/Select';
 import "./ProjectSideMenu.css";
 
 export default function ProjectSideMenu(props) {

@@ -1,4 +1,4 @@
-import ProjectCard from "../ProjectCard/ProjectCard";
+import ProjectCard from "./ProjectCard/ProjectCard";
 import ProjectSideMenu from "../ProjectSideMenu/ProjectSideMenu";
 import "./CodeBox.css";
 

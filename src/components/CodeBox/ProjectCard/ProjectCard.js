@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Profile from "../Profile/Profile";
+import Profile from "../../Profile/Profile";
 import "./ProjectCard.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment, faHeart } from "@fortawesome/free-solid-svg-icons";

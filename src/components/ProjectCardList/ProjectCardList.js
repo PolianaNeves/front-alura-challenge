@@ -1,4 +1,4 @@
-import ProjectCard from "../ProjectCard/ProjectCard";
+import ProjectCard from "../CodeBox/ProjectCard/ProjectCard";
 import "./ProjectCardList.css";
 
 export default function ProjectCardList(props) {

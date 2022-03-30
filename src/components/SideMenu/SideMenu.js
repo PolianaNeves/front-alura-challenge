@@ -1,6 +1,6 @@
 import { faCode, faUsers } from "@fortawesome/free-solid-svg-icons";
 import "./SideMenu.css";
-import SideItem from "../SideItem/SideItem";
+import SideItem from "./SideItem/SideItem";
 import Profile from "../Profile/Profile";
 import profilePhoto from "../../assets/profile-photo.png";
 
