@@ -39,6 +39,10 @@ export default function ProjectSideMenu(props) {
         setDescription(event.target.value)
     }
 
+    const getSelectedLanguage = (selectedLanguage) => {
+        props.onLanguageChange(selectedLanguage)
+    }
+
     return (
         <section className={"project-side-menu"}>
             <h1 className={"sidebar-title-font"}>seu projeto</h1>
@@ -69,6 +73,7 @@ export default function ProjectSideMenu(props) {
                         placeholder={"Selecione a linguagem..."}
                         className={"select"}
                         language={language}
+                        onLanguageChange={getSelectedLanguage}
                     />
                     <input
                         id="color-input"

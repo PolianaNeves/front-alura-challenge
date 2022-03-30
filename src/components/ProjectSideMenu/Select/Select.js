@@ -18,9 +18,10 @@ export default function Select(props) {
         }
     };
 
-    const handleItemClick = (chosenItem) => {
+    const handleItemClick = (itemValue, itemLabel) => {
         document.getElementById("items").className = "hide-items";
-        setChosen(chosenItem);
+        props.onLanguageChange(itemValue)
+        setChosen(itemLabel);
     };
 
     useEffect(() => {
@@ -55,7 +56,7 @@ export default function Select(props) {
                                 type="text"
                                 key={index}
                                 className={"body-font select-font"}
-                                onClick={() => handleItemClick(option.label)}
+                                onClick={() => handleItemClick(option.value, option.label)}
                                 value={fieldLabel || option.label}
                                 readOnly
                             />
