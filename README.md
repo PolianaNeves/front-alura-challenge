@@ -1,31 +1,67 @@
-# Alura Challenges - Front-End edition
+# Alura Dev - Code Editor
 
----
+Alura Dev is a code editor that allows you to share codes in a more attractive way, making it possible to save the project either in the community tab or in a png, jpeg or svg file.
 
-Developed by: Poliana Neves
+## Run - How to
 
----
+1. Install `node js`
+2. Clone the project with `git clone https://github.com/PolianaNeves/front-alura-challenge.git`
+3. Run in CLI: `npm install` and `npm start`
 
--   The challenge
+## Summary
 
-Alura introduces a challenge to it's students frequently, to test their gained habilities throught their courses.
-This was a project developed in the front-end edition of the challenge.
-The challenge is about a content producer that needed an online code editor to post code snipets in social media.
-Asked functionalities were:
+- [Overview](#overview)
+  - [The Challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [Process](#process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [To be continued...](#to-be-continued)
+- [Author](#author)
 
--   A field to select the code language
--   A field to write the code
--   A button to visualize the code with syntax highlight
--   A pretty theme
--   Be responsive
+## Overview
 
-Alura provided a doc in Figma with the UX Guide.
+### The Challenge
 
--   My approach
+Users are capable to:
 
-I decided to use React in this project for several reasons:
+- Edit the code and set highlight
+- Save your project in community page
+- Save the project in png, jpeg or svg
+- Check your project in community page
+- Projects remain in community page.
 
-1. Easy
-2. Highly maintainable (when correctly done)
-3. Globally used, which means, a lot of libraries to use
-4. I already worked with it in the past
+### Screenshot
+
+![](./public/print_home.png)
+
+### Links
+
+- Hosted in: [Alura Dev](https://front-alura-challenge.vercel.app/)
+
+## Process
+
+### Built with
+
+- HTML
+- CSS
+- Flexbox
+- [React](https://reactjs.org/) - JS library
+
+### What I learned
+
+- Libs as:
+  - [React TextArea Code Editor](https://github.com/uiwjs/react-textarea-code-editor) - By uiwjs
+- Group effort in Discord
+
+
+### To be continued...
+
+Future features:
+
+- Language selector (English and Portuguese)
+
+## Author
+
+- GitHub - [PolianaNeves](https://github.com/PolianaNeves)
