@@ -29,31 +29,34 @@ export default function ProjectSideMenu(props) {
         if (codeBoxBg) codeBoxBg.style.backgroundColor = pickedColor;
     };
 
-    const handleChange = (e) => {
-        e.preventDefault();
-        return e.currentTarget.value;
-    };
+    const handleTitleChange = (event) => {
+        event.preventDefault()
+        setTitle(event.target.value)
+    }
+
+    const handleDescriptionChange = (event) => {
+        event.preventDefault()
+        setDescription(event.target.value)
+    }
 
     return (
         <section className={"project-side-menu"}>
             <h1 className={"sidebar-title-font"}>seu projeto</h1>
             <div className={"project-fields"}>
                 <input
+                    className={"body-font"}
                     aria-label="project-title"
                     type="text"
-                    data-testid="project-title"
                     placeholder="Nome do seu projeto"
-                    value={title}
-                    onChange={(e) => handleChange(e)}
-                    className={"body-font"}
+                    value={title || ""}
+                    onChange={(e) => handleTitleChange(e)}
                 />
                 <textarea
                     aria-label="project-description"
-                    data-testid="project-description"
                     placeholder="Descrição do seu projeto"
                     rows="3"
                     value={description}
-                    onChange={(e) => handleChange(e)}
+                    onChange={(e) => handleDescriptionChange(e)}
                     className={"body-font"}
                 />
             </div>
@@ -69,10 +72,9 @@ export default function ProjectSideMenu(props) {
                     />
                     <input
                         id="color-input"
-                        type="color"
-                        value={pickedColor}
                         className={"color-input"}
-                        data-testid="color-input"
+                        type="color"
+                        value={pickedColor || "#6BD1FF"}
                         onChange={() => changeColor()}
                     />
                 </div>

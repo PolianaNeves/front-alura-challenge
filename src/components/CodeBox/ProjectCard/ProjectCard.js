@@ -3,17 +3,16 @@ import Profile from "../../Profile/Profile";
 import "./ProjectCard.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment, faHeart } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate } from 'react-router';
+import { useNavigate } from "react-router";
+import CodeEditor from "@uiw/react-textarea-code-editor";
 
 export default function ProjectCard(props) {
     const navigate = useNavigate();
+    const [language, setLanguage] = useState("js");
     const [codeSnippet, setCodeSnippet] = useState("");
     const [bgColor, setBgColor] = useState("");
     const [user, setUser] = useState(null);
-    const handleChange = (e) => {
-        e.preventDefault();
-        setCodeSnippet(e.target.value);
-    };
+
     useEffect(() => {
         if (props.project) {
             setBgColor(props.project.backgroundColor);
@@ -23,10 +22,17 @@ export default function ProjectCard(props) {
                 name: props.project.author,
             };
             setUser(user);
+            setLanguage(props.project.language);
         }
     }, [codeSnippet, props.project]);
+
+    const handleCodeChange = (event) => {
+        event.preventDefault()
+        setCodeSnippet(event.target.value);
+    };
+
     const handleClick = () => {
-        if(props.project){
+        if (props.project) {
             const project = {
                 name: props.project.name,
                 description: props.project.description,
@@ -35,68 +41,64 @@ export default function ProjectCard(props) {
                 backgroundColor: bgColor,
                 author: user.name,
                 authorPhoto: user.photo,
-                showDetails: false
-            }
-            navigate("/", {state: project});
+                showDetails: false,
+            };
+            navigate("/", { state: project });
         }
-    }
+    };
+
     return (
         <section className={"project-card"} onClick={() => handleClick()}>
             <div
                 id="codebox-bg"
-                data-testid="codebox-bg"
                 className={"codebox-bg"}
                 style={{ backgroundColor: bgColor }}
             >
-                <div data-testid="codebox" className={"codebox"}>
+                <div className={"codebox"}>
                     <div className={"codebox-options"}>
-                        <button data-testid="exit-btn" className={"exit-btn"} />
-                        <button
-                            data-testid="minimize-btn"
-                            className={"minimize-btn"}
-                        />
-                        <button
-                            data-testid="expand-btn"
-                            className={"expand-btn"}
-                        />
+                        <div className={"exit-btn"} />
+                        <div className={"minimize-btn"} />
+                        <div className={"expand-btn"} />
                     </div>
-                    <textarea
-                        rows="13"
-                        data-testid="codebox-text"
-                        className={"codebox-text"}
-                        value={codeSnippet || ""}
-                        onChange={(e) => handleChange(e)}
-                        readOnly={props.readOnly}
-                        autoFocus
-                    />
+                    {props.highlight ? (
+                        <CodeEditor
+                            className={"codebox-text"}
+                            value={codeSnippet || ""}
+                            language={language || "js"}
+                            placeholder="Please enter your code."
+                            onChange={(e) => handleCodeChange(e)}
+                            style={{
+                                backgroundColor: "var(--codebox-color)",
+                                fontFamily: "monospace",
+                                fontStyle: "normal",
+                                fontWeight: "normal",
+                                fontSize: 14,
+                            }}
+                        />
+                    ) : (
+                        <textarea
+                            className={"codebox-text"}
+                            value={codeSnippet || ""}
+                            onChange={(e) => handleCodeChange(e)}
+                            autoFocus
+                        />
+                    )}
                 </div>
             </div>
-            {(props.project && props.project.showDetails) && (
-                <div className="project-details" data-testid="project-details">
+            {props.project && props.project.showDetails && (
+                <div className="project-details">
                     <h1 className={"title-font"}>{props.project.name}</h1>
                     <p className={"body-font body-details-opacity"}>
                         {props.project.description}
                     </p>
                     <div className={"details-footer"}>
                         <div className="community-reaction">
-                            <div
-                                data-testid="comment-count"
-                                className={"comment-item"}
-                            >
-                                <FontAwesomeIcon
-                                    icon={faComment}
-                                    size="lg"
-                                />
+                            <div className={"comment-item"}>
+                                <FontAwesomeIcon icon={faComment} size="lg" />
                                 <p className="body-font">9</p>
                             </div>
-                            <div
-                                data-testid="likes-count"
-                                className={"favorite-item"}
-                            >
-                                <FontAwesomeIcon
-                                    icon={faHeart}
-                                    size="lg"
-                                />
+                            <div className={"favorite-item"}>
+                                <FontAwesomeIcon icon={faHeart} size="lg" />
                                 <p className="body-font">9</p>
                             </div>
                         </div>
