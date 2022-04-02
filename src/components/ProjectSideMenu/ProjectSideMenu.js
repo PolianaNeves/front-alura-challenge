@@ -60,6 +60,7 @@ export default function ProjectSideMenu(props) {
       .then((dao) => dao.adiciona(project))
       .then(() => console.log('projeto adicionado com sucesso'))
       .catch(error => console.log(error));
+    ConnectionFactory._closeConnection();
   };
 
   return (

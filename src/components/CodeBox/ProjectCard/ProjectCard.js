@@ -8,7 +8,6 @@ import CodeEditor from "@uiw/react-textarea-code-editor";
 
 export default function ProjectCard(props) {
     const navigate = useNavigate();
-    // const [language, setLanguage] = useState("js");
     const [codeSnippet, setCodeSnippet] = useState("");
     const [bgColor, setBgColor] = useState("");
     const [user, setUser] = useState(null);
@@ -22,7 +21,6 @@ export default function ProjectCard(props) {
                 name: props.project.author,
             };
             setUser(user);
-            // setLanguage(props.project.language);
         }
     }, [codeSnippet, props.project]);
 
@@ -82,7 +80,6 @@ export default function ProjectCard(props) {
                             className={"codebox-text"}
                             value={codeSnippet || ""}
                             onChange={(e) => handleCodeChange(e)}
-                            autoFocus
                         />
                     )}
                 </div>
