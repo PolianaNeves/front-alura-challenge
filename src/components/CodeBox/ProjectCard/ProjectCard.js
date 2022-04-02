@@ -32,7 +32,7 @@ export default function ProjectCard(props) {
     };
 
     const handleClick = () => {
-        if (props.project) {
+        if (props.project && props.communityPage) {
             const project = {
                 name: props.project.name,
                 description: props.project.description,
@@ -40,10 +40,9 @@ export default function ProjectCard(props) {
                 language: props.project.language,
                 backgroundColor: bgColor,
                 author: user.name,
-                authorPhoto: user.photo,
-                showDetails: false,
+                authorPhoto: user.photo
             };
-            navigate("/", { state: project });
+            navigate("/home", { state: project });
         }
     };
 
@@ -84,7 +83,7 @@ export default function ProjectCard(props) {
                     )}
                 </div>
             </div>
-            {props.project && props.showDetails && (
+            {props.project && props.communityPage && (
                 <div className="project-details">
                     <h1 className={"title-font"}>{props.project.name}</h1>
                     <p className={"body-font body-details-opacity"}>

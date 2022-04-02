@@ -4,9 +4,6 @@ import "./Navbar.css";
 import Profile from "../Profile/Profile";
 import { faSearch, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import profilePhoto from "../../assets/profile-photo.png";
-
-const user = { photo: profilePhoto, name: "Harry" };
 
 function Navbar(props) {
     const [searchActive, setSearchActive] = useState(false);
@@ -69,7 +66,7 @@ function Navbar(props) {
                 onClick={() => animateSideMenu()}
             />
             <div className={"desktop-profile"}>
-                <Profile user={user} />
+                <Profile user={props.user} />
             </div>
         </nav>
     );

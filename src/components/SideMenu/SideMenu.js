@@ -10,7 +10,7 @@ const items = [
     {
         icon: faCode,
         textLink: "Editor de código",
-        routePath: "/",
+        routePath: "/home",
     },
     {
         icon: faUsers,

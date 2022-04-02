@@ -28,7 +28,7 @@ export default function CodeBox(props) {
                         project={props.project}
                         highlight={highlight}
                         language={language}
-                        showDetails={false}
+                        communityPage={false}
                         onCodeChange={getUpdatedCode}
                     />
                 </div>

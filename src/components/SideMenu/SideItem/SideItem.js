@@ -3,10 +3,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
 export default function SideItem(props) {
+    const isHome = props.item.routePath === "/home" ? true : false;
     return (
         <div>
             <Link
                 to={props.item.routePath}
+                replace={isHome}
                 className={"primary-menu-item body-font"}
             >
                 <div

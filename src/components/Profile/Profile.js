@@ -2,6 +2,8 @@ import React from "react";
 import "./Profile.css";
 
 export default function Profile(props) {
+    if (!props.user)
+        return <div>No user found!</div>
     return (
         <div className={"profile-box"}>
             {props.user.photo && (
