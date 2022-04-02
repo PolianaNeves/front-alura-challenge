@@ -28,7 +28,9 @@ export default function ProjectCard(props) {
 
     const handleCodeChange = (event) => {
         event.preventDefault()
-        setCodeSnippet(event.target.value);
+        let codeSnippet = event.target.value
+        props.onCodeChange(codeSnippet)
+        setCodeSnippet(codeSnippet);
     };
 
     const handleClick = () => {
@@ -85,7 +87,7 @@ export default function ProjectCard(props) {
                     )}
                 </div>
             </div>
-            {props.project && props.project.showDetails && (
+            {props.project && props.showDetails && (
                 <div className="project-details">
                     <h1 className={"title-font"}>{props.project.name}</h1>
                     <p className={"body-font body-details-opacity"}>

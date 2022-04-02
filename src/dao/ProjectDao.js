@@ -1,6 +1,6 @@
 import { Project } from "../models/Project";
 
-class ProjectDao {
+export class ProjectDao {
     constructor(connection) {
         this._connection = connection;
         this._store = "projects";

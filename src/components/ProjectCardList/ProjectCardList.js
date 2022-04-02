@@ -7,7 +7,7 @@ export default function ProjectCardList(props) {
             {props.projects.map((project, index) => {
                 return (
                     <div key={index} className={"community-project"}>
-                        <ProjectCard project={project} readOnly={true} />
+                        <ProjectCard project={project} readOnly={true} showDetails/>
                     </div>
                 );
             })}

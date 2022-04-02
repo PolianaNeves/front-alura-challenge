@@ -1,4 +1,4 @@
-var ConnectionFactory = (function () {
+export var ConnectionFactory = (function () {
     const stores = ["users", "projects"];
     const version = 1;
     const dbName = "front-alura-challenge";

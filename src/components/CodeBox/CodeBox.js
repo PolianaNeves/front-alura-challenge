@@ -9,10 +9,15 @@ export default function CodeBox(props) {
     const [language, setLanguage] = useState("");
     const [highlight, setHighlight] = useState(false);
     const exportProjectCard = useRef(null);
+    const [codeSnippet, setCodeSnippet] = useState("");
 
     const getSelectedLanguage = (selectedLanguage) => {
         setLanguage(selectedLanguage);
     };
+
+    const getUpdatedCode = (code) => {
+        setCodeSnippet(code)
+    }
 
     return (
         <section className={"codebox-section"}>
@@ -23,6 +28,8 @@ export default function CodeBox(props) {
                         project={props.project}
                         highlight={highlight}
                         language={language}
+                        showDetails={false}
+                        onCodeChange={getUpdatedCode}
                     />
                 </div>
                 <button
@@ -49,6 +56,7 @@ export default function CodeBox(props) {
                 <ProjectSideMenu
                     project={props.project}
                     onLanguageChange={getSelectedLanguage}
+                    codeSnippet={codeSnippet}
                 />
             </div>
         </section>
