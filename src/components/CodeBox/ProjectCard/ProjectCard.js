@@ -19,7 +19,7 @@ export default function ProjectCard(props) {
       setBgColor(props.project.backgroundColor);
       setCodeSnippet(props.project.codeSnippet);
       const user = {
-        name: props.project.author,
+        _name: props.project.author,
       };
       setUser(user);
     }
