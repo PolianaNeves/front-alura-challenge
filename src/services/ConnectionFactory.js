@@ -1,7 +1,7 @@
 export var ConnectionFactory = (function () {
     const stores = ["users", "projects"];
     const version = 1;
-    const dbName = "front-alura-challenge";
+    const dbName = "alura-dev";
     var connection = null;
     var close = null;
 
@@ -45,6 +45,7 @@ export var ConnectionFactory = (function () {
                     connection.deleteObjectStore(store);
 
                 connection.createObjectStore(store, {
+                    keyPath: "_name",
                     autoIncrement: true,
                 });
             });

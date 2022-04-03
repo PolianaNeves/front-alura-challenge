@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import Select from "./Select/Select";
-import "./ProjectSideMenu.css";
 import { ConnectionFactory } from "../../services/ConnectionFactory";
 import { ProjectDao } from "../../dao/ProjectDao";
+import Select from "./Select/Select";
+import "./ProjectSideMenu.css";
+import { Project } from "../../models/Project";
 
 export default function ProjectSideMenu(props) {
   const [pickedColor, setPickedColor] = useState("#6BD1FF");
@@ -23,9 +24,10 @@ export default function ProjectSideMenu(props) {
       setPickedColor(props.project.backgroundColor);
       setLanguage(props.project.language);
     }
-  }, [props.project, title, description]);
+  }, [props.project]);
 
-  const changeColor = () => {
+  const changeColor = (e) => {
+    e.preventDefault();
     setPickedColor(document.getElementById("color-input").value);
     const codeBoxBg = document.getElementById("codebox-bg");
     if (codeBoxBg) codeBoxBg.style.backgroundColor = pickedColor;
@@ -47,19 +49,19 @@ export default function ProjectSideMenu(props) {
   };
 
   const saveProject = () => {
-    const project = {
-      name: title,
-      description: description,
-      codeSnippet: props.codeSnippet,
-      language: language,
-      backgroundColor: pickedColor,
-      author: "teste" //TODO: Buscar o usuário que está realizando a inserção do projeto no banco
-    };
+    const project = new Project(
+      title,
+      description,
+      props.codeSnippet,
+      language,
+      pickedColor,
+      "teste"
+    );
     ConnectionFactory.getConnection()
       .then((connection) => new ProjectDao(connection))
       .then((dao) => dao.adiciona(project))
-      .then(() => console.log('projeto adicionado com sucesso'))
-      .catch(error => console.log(error));
+      .then(() => console.log("projeto adicionado com sucesso"))
+      .catch((error) => console.log(error));
     ConnectionFactory._closeConnection();
   };
 
@@ -100,7 +102,7 @@ export default function ProjectSideMenu(props) {
             className={"color-input"}
             type="color"
             value={pickedColor || "#6BD1FF"}
-            onChange={() => changeColor()}
+            onChange={(e) => changeColor(e)}
           />
         </div>
       </section>

@@ -1,8 +1,8 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 import { User } from "../../models/User";
 import { ConnectionFactory } from "../../services/ConnectionFactory";
 import { UserDao } from "../../dao/UserDao";
-import { useNavigate } from "react-router";
 import GlobalStyle from "../../theme/globalStyles";
 import "../../App.css";
 import "../../theme/fonts.css";
