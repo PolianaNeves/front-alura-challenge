@@ -25,9 +25,11 @@ export default function Select(props) {
     };
 
     useEffect(() => {
-        if(props.language && 
-            props.options.filter(option => option.label === props.language).length > 0)
-            setChosen(props.language);
+        if(props.language){
+            let languages = props.options.filter(option => option.value === props.language);
+            if (languages.length > 0)
+                setChosen(languages[0].label)
+        }
     }, [chosen, props.options, props.language])
 
     return (
