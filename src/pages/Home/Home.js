@@ -1,12 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, createContext } from "react";
 import { useLocation } from "react-router";
 import { Outlet } from "react-router";
-import { User } from "../../models/User";
 import Navbar from "../../components/NavBar/Navbar";
 import GlobalStyle from "../../theme/globalStyles";
 import SideMenu from "../../components/SideMenu/SideMenu";
 import "../../App.css";
 import "../../theme/fonts.css";
+
+export const UserContext = createContext();
 
 export default function Home() {
   const [user, setUser] = useState(null);
@@ -14,18 +15,20 @@ export default function Home() {
 
   useEffect(() => {
     if (location.state) {
-      setUser(new User(location.state._name));
+      setUser(location.state.user);
     }
   }, [location.state]);
 
   return (
     <div className={"home-page"}>
       <GlobalStyle />
-      <Navbar user={user} />
-      <div className={"home-content"}>
-        <SideMenu />
-        <Outlet />
-      </div>
+      <UserContext.Provider value={user}>
+        <Navbar />
+        <div className={"home-content"}>
+          <SideMenu />
+          <Outlet />
+        </div>
+      </UserContext.Provider>
     </div>
   );
 }

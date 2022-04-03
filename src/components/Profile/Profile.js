@@ -6,13 +6,13 @@ export default function Profile(props) {
         return <div>No user found!</div>
     return (
         <div className={"profile-box"}>
-            {props.user.photo && (
-                <img alt="profile-thumbnail" src={props.user.photo} />
+            {props.user._photo && (
+                <img alt="profile-thumbnail" src={props.user._photo} />
             )}
             
             <h1 className={"title-font"}>
                 {props.showIcon && "@ "}
-                {props.user.name}
+                {props.user._name}
             </h1>
         </div>
     );

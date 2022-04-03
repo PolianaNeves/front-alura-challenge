@@ -1,14 +1,16 @@
-import React, { useState } from "react";
-import logo from "../../assets/Logo.png";
-import "./Navbar.css";
-import Profile from "../Profile/Profile";
+import { useState, useContext } from "react";
 import { faSearch, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { UserContext } from '../../pages/Home/Home';
+import logo from "../../assets/Logo.png";
+import Profile from "../Profile/Profile";
+import "./Navbar.css";
 
 function Navbar(props) {
     const [searchActive, setSearchActive] = useState(false);
     const [barsActive, setBarsActive] = useState(false);
     const [menuIcon, setMenuIcon] = useState(faBars);
+    const user = useContext(UserContext)
     const animateSearchInput = () => {
         if (searchActive) {
             document.getElementById("platform-logo").className =
@@ -66,7 +68,7 @@ function Navbar(props) {
                 onClick={() => animateSideMenu()}
             />
             <div className={"desktop-profile"}>
-                <Profile user={props.user} />
+                <Profile user={user} />
             </div>
         </nav>
     );

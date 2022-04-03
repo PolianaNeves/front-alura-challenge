@@ -21,7 +21,7 @@ export default function Login() {
     ConnectionFactory.getConnection()
       .then((connection) => new UserDao(connection))
       .then((dao) => dao.adiciona(user))
-      .then(() => navigate("/home", { state: user }))
+      .then(() => navigate("/home", { state: {user} }))
       .catch((error) => console.error(error));
     ConnectionFactory._closeConnection();
   };

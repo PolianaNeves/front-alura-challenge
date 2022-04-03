@@ -1,15 +1,19 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { useNavigate } from "react-router";
 import { ConnectionFactory } from "../../services/ConnectionFactory";
 import { ProjectDao } from "../../dao/ProjectDao";
+import { Project } from "../../models/Project";
+import { UserContext } from "../../pages/Home/Home";
 import Select from "./Select/Select";
 import "./ProjectSideMenu.css";
-import { Project } from "../../models/Project";
 
 export default function ProjectSideMenu(props) {
   const [pickedColor, setPickedColor] = useState("#6BD1FF");
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [language, setLanguage] = useState("");
+  const navigate = useNavigate();
+  const contextUser = useContext(UserContext);
 
   const languageOptions = [
     { value: "javascript", label: "JavaScript" },
@@ -55,12 +59,12 @@ export default function ProjectSideMenu(props) {
       props.codeSnippet,
       language,
       pickedColor,
-      "teste"
+      contextUser._name
     );
     ConnectionFactory.getConnection()
       .then((connection) => new ProjectDao(connection))
       .then((dao) => dao.adiciona(project))
-      .then(() => console.log("projeto adicionado com sucesso"))
+      .then(() => navigate("/home/community", { state: { user: contextUser } }))
       .catch((error) => console.log(error));
     ConnectionFactory._closeConnection();
   };
@@ -108,7 +112,7 @@ export default function ProjectSideMenu(props) {
       </section>
 
       <button
-        type="submit"
+        type="button"
         className={"button-filled button-filled-font"}
         onClick={saveProject}
       >

@@ -1,11 +1,10 @@
-import ProjectCardList from "../../components/ProjectCardList/ProjectCardList";
-import { ConnectionFactory } from '../../services/ConnectionFactory';
 import { useState, useEffect } from 'react';
+import { ConnectionFactory } from '../../services/ConnectionFactory';
 import { ProjectDao } from '../../dao/ProjectDao';
+import ProjectCardList from "../../components/ProjectCardList/ProjectCardList";
 
 export default function CommunityPage(props) {
     const [projects, setProjects] = useState([]);
-
     useEffect(() => {
         ConnectionFactory
             .getConnection()

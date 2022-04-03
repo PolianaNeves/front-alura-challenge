@@ -4,9 +4,10 @@ import "./CodeEditor.css";
 
 export default function CodeEditorPage() {
     const location = useLocation();
+    
     return (
         <form className={"code-editor-page"}>
-            <CodeBox className={"code-editor-content"} project={location.state}/>
+            <CodeBox className={"code-editor-content"} project={location.state?.project}/>
         </form>
     );
 }

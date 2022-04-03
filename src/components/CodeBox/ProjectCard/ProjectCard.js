@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { UserContext } from "../../../pages/Home/Home";
 import CodeEditor from "@uiw/react-textarea-code-editor";
 import Profile from "../../Profile/Profile";
 import "./ProjectCard.css";
@@ -10,16 +11,14 @@ export default function ProjectCard(props) {
   const [codeSnippet, setCodeSnippet] = useState("");
   const [bgColor, setBgColor] = useState("");
   const [user, setUser] = useState(null);
+  const contextUser = useContext(UserContext);
   const navigate = useNavigate();
 
   useEffect(() => {
     if (props.project) {
-      console.log('projeto encontrado')
-      console.log(props.project)
       setBgColor(props.project.backgroundColor);
       setCodeSnippet(props.project.codeSnippet);
       const user = {
-        photo: props.project.authorPhoto,
         name: props.project.author,
       };
       setUser(user);
@@ -38,13 +37,12 @@ export default function ProjectCard(props) {
       const project = {
         name: props.project.name,
         description: props.project.description,
-        codeSnippet: codeSnippet,
+        codeSnippet: props.project.codeSnippet,
         language: props.project.language,
-        backgroundColor: bgColor,
-        author: user.name,
-        authorPhoto: user.photo,
+        backgroundColor: props.project.backgroundColor,
+        author: props.project.author,
       };
-      navigate("/home", { state: project });
+      navigate("/home", { state: { project, user: contextUser } });
     }
   };
 
