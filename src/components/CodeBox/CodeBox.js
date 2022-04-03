@@ -1,9 +1,8 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard/ProjectCard";
 import ProjectSideMenu from "../ProjectSideMenu/ProjectSideMenu";
 import "./CodeBox.css";
 import { exportAsImage } from "../../helpers/export-images";
-import { useRef } from "react/cjs/react.development";
 
 export default function CodeBox(props) {
     const [language, setLanguage] = useState("");
@@ -28,7 +27,7 @@ export default function CodeBox(props) {
                         project={props.project}
                         highlight={highlight}
                         language={language}
-                        showDetails={false}
+                        communityPage={false}
                         onCodeChange={getUpdatedCode}
                     />
                 </div>

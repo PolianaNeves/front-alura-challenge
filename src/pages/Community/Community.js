@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import { ProjectDao } from '../../dao/ProjectDao';
 
 export default function CommunityPage(props) {
-
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
