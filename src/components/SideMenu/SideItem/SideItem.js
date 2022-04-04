@@ -18,6 +18,7 @@ export default function SideItem(props) {
                     <FontAwesomeIcon
                         icon={props.item.icon}
                         className={"primary-icon-opacity"}
+                        style={{width: 20}}
                     />
                 </div>
                 <p>{props.item.textLink}</p>

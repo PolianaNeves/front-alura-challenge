@@ -1,4 +1,4 @@
-import { faCode, faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faCode, faUsers, faFile } from "@fortawesome/free-solid-svg-icons";
 import "./SideMenu.css";
 import SideItem from "./SideItem/SideItem";
 import Profile from "../Profile/Profile";
@@ -18,6 +18,11 @@ const items = [
         textLink: sideMenuLinks.community,
         routePath: routes.community,
     },
+    {
+        icon: faFile,
+        textLink: sideMenuLinks.styleGuide,
+        routePath: routes.styleGuide
+    }
 ];
 
 export default function SideMenu(props) {

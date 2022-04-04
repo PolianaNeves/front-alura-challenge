@@ -1,13 +1,14 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ReactDOM from "react-dom";
+import reportWebVitals from "./reportWebVitals";
 import CodeEditorPage from "./pages/CodeEditor/CodeEditor";
 import CommunityPage from "./pages/Community/Community";
 import Login from "./pages/Login/Login";
 import Home from "./pages/Home/Home";
 import App from "./App";
+import StyleGuide from "./pages/StyleGuide/StyleGuide";
+import "./index.css";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.render(
           <Route exact path="/home" element={<Home />}>
             <Route index element={<CodeEditorPage />} />
             <Route exact path="community" element={<CommunityPage />} />
+            <Route exact path="style-guide" element={<StyleGuide />} />
           </Route>
         </Route>
       </Routes>

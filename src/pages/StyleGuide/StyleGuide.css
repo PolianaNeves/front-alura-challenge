@@ -1,0 +1,15 @@
+.style-guide-section {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 48px;
+}
+
+.title-font {
+    margin-bottom: 16px;
+}
+
+.colors-guide-list {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 16px;
+}

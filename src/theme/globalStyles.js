@@ -6,6 +6,8 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
     }
     html {   
+        --text-color: #3D3D3D;
+        --text-color-light: #A3A3A3;
         --dark-blue: #051d3b;
         --blue-300: #5081fb;
         --blue-200: #7ba4fc;
