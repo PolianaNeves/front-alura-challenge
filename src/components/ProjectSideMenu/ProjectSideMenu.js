@@ -10,6 +10,7 @@ import {
   appPlaceholders,
   buttons,
 } from "../../constants";
+import Button from "../Button/Button";
 import Select from "./Select/Select";
 import "./ProjectSideMenu.css";
 
@@ -110,14 +111,12 @@ export default function ProjectSideMenu(props) {
           />
         </div>
       </section>
-
-      <button
-        type="button"
-        className={"button-filled button-filled-font"}
-        onClick={saveProject}
-      >
-        {buttons.saveProject}
-      </button>
+      <Button
+        class={"button-filled button-filled-font"}
+        click={saveProject}
+        text={buttons.saveProject}
+        filled
+      />
     </section>
   );
 }

@@ -4,6 +4,7 @@ import { buttons } from '../../constants';
 import ProjectCard from "../ProjectCard/ProjectCard";
 import ProjectSideMenu from "../ProjectSideMenu/ProjectSideMenu";
 import "./CodeBox.css";
+import Button from "../Button/Button";
 
 export default function CodeBox(props) {
     const [language, setLanguage] = useState("");
@@ -32,24 +33,20 @@ export default function CodeBox(props) {
                         onCodeChange={getUpdatedCode}
                     />
                 </div>
-                <button
-                    type="button"
-                    className={
+                <Button
+                    class={
                         "highlight-btn button-outlined button-outlined-font"
                     }
-                    onClick={() => setHighlight(!highlight)}
-                >
-                    {buttons.highlight}
-                </button>
-                <button
-                    type="button"
-                    className="button-outlined button-outlined-font"
-                    onClick={() =>
+                    click={() => setHighlight(!highlight)}
+                    text={buttons.highlight}
+                />
+                <Button
+                    class="button-outlined button-outlined-font"
+                    click={() =>
                         exportAsImage(exportProjectCard.current, "test")
                     }
-                >
-                    {buttons.exportAsImage}
-                </button>
+                    text={buttons.exportAsImage}
+                />
             </div>
             <div className="side-menu-section">
                 <ProjectSideMenu

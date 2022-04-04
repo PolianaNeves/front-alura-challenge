@@ -48,58 +48,6 @@ const GlobalStyle = createGlobalStyle`
     .hide-element{
         display: none;
     }
-    .button-filled-font{
-        font-family: Inter;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 24px;
-        color: var(--dark-blue);
-    }
-    .button-filled{
-        background-color: var(--blue-300);
-        color: #000;
-        padding: 16px;
-        border-radius: 8px;
-        border: 0;
-    }
-    .button-filled:hover{
-        background-color: var(--blue-200);
-    }
-    .button-filled:pressed{
-        background-color: var(--blue-200);
-        stroke: var(--blue-300);
-        stroke-width: 4px;
-    }
-    .button-filled:focus{
-        background-color: var(--blue-100);
-    }
-    .button-outlined-font{
-        font-family: Inter;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 24px;
-        color: var(--white);
-    }
-    .button-outlined{
-        background-color: rgba(80, 129, 251, 0.08);
-        color: var(--white);
-        padding: 16px;
-        border: 0;
-        border-radius: 8px;
-    }
-    .button-outlined:hover{
-        background-color: rgba(80,129,251,0.16);
-    }
-    .button-outlined:pressed{
-        background-color: rgba(80, 129, 251, 0.16);
-        border: 4px solid rgba(80, 129, 251, 0.24);
-        border-radius: 8px; 
-    }
-    .button-outlined:focus{
-        background-color: rgba(80,129,251,0.24);
-    }
     input,select,textarea{
         background-color: var(--offset-white);
         color: var(--white);
