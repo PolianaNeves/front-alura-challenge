@@ -28,3 +28,22 @@
     display: flex;
     justify-content: space-between;
 }
+
+.form-components-guide {
+    display: flex;
+    flex-flow: row nowrap;
+    color: var(--white);
+    gap: 48px
+}
+
+.input-guide{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 16px;
+}
+
+.select-guide {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 16px;
+}
