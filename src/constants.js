@@ -56,3 +56,5 @@ export const typographyTypes = [
         textTransform: "uppercase",
     },
 ];
+
+export const shadow = {xAxis: "0", yAxis: "16", rgb: "0,0,0,0,0.24"}

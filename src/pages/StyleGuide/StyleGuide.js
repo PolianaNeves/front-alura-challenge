@@ -1,6 +1,6 @@
 import ColorCard from "../../components/ColorCard/ColorCard";
 import TypographyCard from "../../components/TypographyCard/TypographyCard";
-import { colors, typographyTypes } from "../../constants";
+import { colors, typographyTypes, shadow } from "../../constants";
 import "./StyleGuide.css";
 
 export default function StyleGuide() {
@@ -20,6 +20,13 @@ export default function StyleGuide() {
             </div>
             <div>
                 <h1 className="title-font">Sombras</h1>
+                <div className="shadow-guide">
+                    <p className="shadow-guide-axis">
+                        <span>X = {shadow.xAxis}</span>
+                        <span>Y = {shadow.yAxis}</span>
+                    </p>
+                    rgb({shadow.rgb})
+                </div>
             </div>
             <div>
                 <h1 className="title-font">Form components</h1>
