@@ -4,6 +4,7 @@ import { User } from "../../models/User";
 import { ConnectionFactory } from "../../services/ConnectionFactory";
 import { UserDao } from "../../dao/UserDao";
 import { UserContext } from "../../App";
+import { buttons } from '../../constants';
 import "./Login.css";
 
 export default function Login() {
@@ -46,7 +47,7 @@ export default function Login() {
         className="button-outlined button-outlined-font"
         onClick={saveUser}
       >
-        Salvar
+        {buttons.logIn}
       </button>
     </section>
   );

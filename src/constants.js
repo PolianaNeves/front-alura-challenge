@@ -31,4 +31,5 @@ export const buttons = {
     saveProject: "Salvar projeto",
     highlight: "Visualizar com o highlight",
     exportAsImage: "Export as image",
+    logIn: "Log In"
 }

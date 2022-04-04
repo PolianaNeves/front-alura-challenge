@@ -61,6 +61,7 @@ Users are capable to:
 Future features:
 
 - Language selector (English and Portuguese)
+- Multiple users login
 
 ## Author
 
