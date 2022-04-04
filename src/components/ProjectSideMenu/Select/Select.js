@@ -1,7 +1,7 @@
-import "./Select.css";
 import { useEffect, useState } from "react";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./Select.css";
 
 export default function Select(props) {
     const [chosen, setChosen] = useState(props.placeholder);

@@ -4,8 +4,7 @@ import { User } from "../../models/User";
 import { ConnectionFactory } from "../../services/ConnectionFactory";
 import { UserDao } from "../../dao/UserDao";
 import { UserContext } from "../../App";
-import "../../App.css";
-import "../../theme/fonts.css";
+import "./Login.css";
 
 export default function Login() {
   const [userName, setUserName] = useState("");
@@ -35,18 +34,20 @@ export default function Login() {
   };
 
   return (
-    <div>
-      <section>
-        <input
-          type="text"
-          placeholder="Digite seu nome..."
-          value={userName}
-          onChange={(e) => handleUserNameChange(e)}
-        />
-        <button type="button" onClick={saveUser}>
-          Salvar
-        </button>
-      </section>
-    </div>
+    <section className="login-section">
+      <input
+        type="text"
+        placeholder="Digite seu nome..."
+        value={userName}
+        onChange={(e) => handleUserNameChange(e)}
+      />
+      <button
+        type="button"
+        className="button-outlined button-outlined-font"
+        onClick={saveUser}
+      >
+        Salvar
+      </button>
+    </section>
   );
 }

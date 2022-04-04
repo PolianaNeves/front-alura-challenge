@@ -3,19 +3,20 @@ import "./SideMenu.css";
 import SideItem from "./SideItem/SideItem";
 import Profile from "../Profile/Profile";
 import profilePhoto from "../../assets/profile-photo.png";
+import { sideMenuLinks, routes } from '../../constants';
 
 const user = { photo: profilePhoto, name: "Harry" };
 
 const items = [
     {
         icon: faCode,
-        textLink: "Editor de código",
-        routePath: "/home",
+        textLink: sideMenuLinks.codeEditor,
+        routePath: `/${routes.home}`,
     },
     {
         icon: faUsers,
-        textLink: "Comunidade",
-        routePath: "community",
+        textLink: sideMenuLinks.community,
+        routePath: routes.community,
     },
 ];
 

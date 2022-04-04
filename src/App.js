@@ -22,7 +22,7 @@ export default function App() {
   }, []);
 
   return (
-    <div>
+    <div className='app'>
       <GlobalStyle />
       <UserContext.Provider value={user}>
         <Outlet />

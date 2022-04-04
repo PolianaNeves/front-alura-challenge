@@ -45,25 +45,7 @@ export class UserDao {
       };
     });
   }
-
-  countUsers() {
-    return new Promise((resolve, reject) => {
-      var request = this._connection
-        .transaction([this._store], "readonly")
-        .objectStore(this._store)
-        .count();
-
-      request.onsuccess = () => {
-        resolve(request.result);
-      };
-
-      request.onerror = (e) => {
-        console.log(e.target.error);
-        reject(e.target.error.name);
-      };
-    });
-  }
-
+  
   getFirstUser() {
     return new Promise((resolve, reject) => {
       let cursor = this._connection

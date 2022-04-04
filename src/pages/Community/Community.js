@@ -3,7 +3,7 @@ import { ConnectionFactory } from '../../services/ConnectionFactory';
 import { ProjectDao } from '../../dao/ProjectDao';
 import ProjectCardList from "../../components/ProjectCardList/ProjectCardList";
 
-export default function CommunityPage(props) {
+export default function CommunityPage() {
     const [projects, setProjects] = useState([]);
     useEffect(() => {
         ConnectionFactory
@@ -14,7 +14,6 @@ export default function CommunityPage(props) {
             .catch(error => console.error(error));
         ConnectionFactory._closeConnection();
     }, [])
-
-
+    
     return <ProjectCardList projects={projects}/>;
 }

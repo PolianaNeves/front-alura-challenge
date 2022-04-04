@@ -1,10 +1,4 @@
-.home-page {
+.app {
     display: flex;
-    flex-flow: column wrap;
-}
-
-.home-content {
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 40px;
+    justify-content: center;
 }

@@ -2,9 +2,9 @@ import { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment, faHeart } from "@fortawesome/free-solid-svg-icons";
-import { UserContext } from "../../../App";
+import { UserContext } from "../../App";
 import CodeEditor from "@uiw/react-textarea-code-editor";
-import Profile from "../../Profile/Profile";
+import Profile from "../Profile/Profile";
 import "./ProjectCard.css";
 
 export default function ProjectCard(props) {

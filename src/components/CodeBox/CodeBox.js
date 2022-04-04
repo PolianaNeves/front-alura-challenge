@@ -1,8 +1,9 @@
 import { useState, useRef } from "react";
-import ProjectCard from "./ProjectCard/ProjectCard";
+import { exportAsImage } from "../../helpers/export-images";
+import { buttons } from '../../constants';
+import ProjectCard from "../ProjectCard/ProjectCard";
 import ProjectSideMenu from "../ProjectSideMenu/ProjectSideMenu";
 import "./CodeBox.css";
-import { exportAsImage } from "../../helpers/export-images";
 
 export default function CodeBox(props) {
     const [language, setLanguage] = useState("");
@@ -33,13 +34,12 @@ export default function CodeBox(props) {
                 </div>
                 <button
                     type="button"
-                    data-testid="highlight-btn"
                     className={
                         "highlight-btn button-outlined button-outlined-font"
                     }
                     onClick={() => setHighlight(!highlight)}
                 >
-                    Visualizar com o highlight
+                    {buttons.highlight}
                 </button>
                 <button
                     type="button"
@@ -48,7 +48,7 @@ export default function CodeBox(props) {
                         exportAsImage(exportProjectCard.current, "test")
                     }
                 >
-                    Export as image
+                    {buttons.exportAsImage}
                 </button>
             </div>
             <div className="side-menu-section">

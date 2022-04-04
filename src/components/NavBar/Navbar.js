@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { faSearch, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { UserContext } from '../../App';
+import { appPlaceholders } from '../../constants';
 import logo from "../../assets/Logo.png";
 import Profile from "../Profile/Profile";
 import "./Navbar.css";
@@ -50,7 +51,7 @@ function Navbar(props) {
                 <input
                     type="text"
                     id="search-input"
-                    placeholder={"Busque por algo"}
+                    placeholder={appPlaceholders.search}
                     className={"search-input body-font"}
                 />
                 <FontAwesomeIcon

@@ -4,6 +4,12 @@ import { ConnectionFactory } from "../../services/ConnectionFactory";
 import { ProjectDao } from "../../dao/ProjectDao";
 import { Project } from "../../models/Project";
 import { UserContext } from "../../App";
+import {
+  languageOptions,
+  sideMenuTitles,
+  appPlaceholders,
+  buttons,
+} from "../../constants";
 import Select from "./Select/Select";
 import "./ProjectSideMenu.css";
 
@@ -14,12 +20,6 @@ export default function ProjectSideMenu(props) {
   const [language, setLanguage] = useState("");
   const navigate = useNavigate();
   const contextUser = useContext(UserContext);
-
-  const languageOptions = [
-    { value: "javascript", label: "JavaScript" },
-    { value: "html", label: "HTML" },
-    { value: "css", label: "CSS" },
-  ];
 
   useEffect(() => {
     if (props.project) {
@@ -71,19 +71,19 @@ export default function ProjectSideMenu(props) {
 
   return (
     <section className={"project-side-menu"}>
-      <h1 className={"sidebar-title-font"}>seu projeto</h1>
+      <h1 className={"sidebar-title-font"}>{sideMenuTitles.yourProject}</h1>
       <div className={"project-fields"}>
         <input
           className={"body-font"}
           aria-label="project-title"
           type="text"
-          placeholder="Nome do seu projeto"
+          placeholder={appPlaceholders.projectName}
           value={title || ""}
           onChange={(e) => handleTitleChange(e)}
         />
         <textarea
           aria-label="project-description"
-          placeholder="Descrição do seu projeto"
+          placeholder={appPlaceholders.projectDescription}
           rows="3"
           value={description}
           onChange={(e) => handleDescriptionChange(e)}
@@ -92,11 +92,11 @@ export default function ProjectSideMenu(props) {
       </div>
 
       <section className={"custom-options-section"}>
-        <h1 className={"sidebar-title-font"}>personalização</h1>
-        <div className={"options-fields"} data-testid="options-fields">
+        <h1 className={"sidebar-title-font"}>{sideMenuTitles.customization}</h1>
+        <div className={"options-fields"}>
           <Select
             options={languageOptions}
-            placeholder={"Selecione a linguagem..."}
+            placeholder={appPlaceholders.projectCustomization}
             className={"select"}
             language={language}
             onLanguageChange={getSelectedLanguage}
@@ -116,7 +116,7 @@ export default function ProjectSideMenu(props) {
         className={"button-filled button-filled-font"}
         onClick={saveProject}
       >
-        Salvar projeto
+        {buttons.saveProject}
       </button>
     </section>
   );
