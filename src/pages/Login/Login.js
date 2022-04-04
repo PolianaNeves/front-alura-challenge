@@ -19,7 +19,6 @@ export default function Login() {
 
   useEffect(() => {
     if (contextUser) {
-      console.log("encontrou um usuario");
       navigate("/home", { state: { user: contextUser } });
     }
   }, [contextUser, navigate]);

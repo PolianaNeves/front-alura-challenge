@@ -62,6 +62,7 @@ Future features:
 
 - Language selector (English and Portuguese)
 - Multiple users login
+- Likes and comments
 
 ## Author
 
