@@ -5,17 +5,20 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CodeEditorPage from "./pages/CodeEditor/CodeEditor";
 import CommunityPage from "./pages/Community/Community";
-import Login from './pages/Login/Login';
-import Home from './pages/Home/Home';
+import Login from "./pages/Login/Login";
+import Home from "./pages/Home/Home";
+import App from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route exact path="/" element={<Login />}/>
-        <Route exact path='/home' element={<Home/>}>
-            <Route index element={<CodeEditorPage/>}/>
-            <Route exact path='community' element={<CommunityPage/>}/>
+        <Route exact path="/" element={<App />}>
+          <Route index element={<Login />} />
+          <Route exact path="/home" element={<Home />}>
+            <Route index element={<CodeEditorPage />} />
+            <Route exact path="community" element={<CommunityPage />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>

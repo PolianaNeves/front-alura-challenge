@@ -1,34 +1,41 @@
-import { useState } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router";
 import { User } from "../../models/User";
 import { ConnectionFactory } from "../../services/ConnectionFactory";
 import { UserDao } from "../../dao/UserDao";
-import GlobalStyle from "../../theme/globalStyles";
+import { UserContext } from "../../App";
 import "../../App.css";
 import "../../theme/fonts.css";
 
 export default function Login() {
   const [userName, setUserName] = useState("");
   const navigate = useNavigate();
+  const contextUser = useContext(UserContext);
 
   const handleUserNameChange = (event) => {
     event.preventDefault();
     setUserName(event.target.value);
   };
 
+  useEffect(() => {
+    if (contextUser) {
+      console.log("encontrou um usuario");
+      navigate("/home", { state: { user: contextUser } });
+    }
+  }, [contextUser, navigate]);
+
   const saveUser = () => {
     const user = new User(userName);
     ConnectionFactory.getConnection()
       .then((connection) => new UserDao(connection))
       .then((dao) => dao.adiciona(user))
-      .then(() => navigate("/home", { state: {user} }))
+      .then(() => navigate("/home", { state: { user } }))
       .catch((error) => console.error(error));
     ConnectionFactory._closeConnection();
   };
 
   return (
     <div>
-      <GlobalStyle />
       <section>
         <input
           type="text"

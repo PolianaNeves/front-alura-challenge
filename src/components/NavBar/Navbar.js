@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import { faSearch, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { UserContext } from '../../pages/Home/Home';
+import { UserContext } from '../../App';
 import logo from "../../assets/Logo.png";
 import Profile from "../Profile/Profile";
 import "./Navbar.css";

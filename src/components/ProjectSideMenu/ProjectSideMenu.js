@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import { ConnectionFactory } from "../../services/ConnectionFactory";
 import { ProjectDao } from "../../dao/ProjectDao";
 import { Project } from "../../models/Project";
-import { UserContext } from "../../pages/Home/Home";
+import { UserContext } from "../../App";
 import Select from "./Select/Select";
 import "./ProjectSideMenu.css";
 

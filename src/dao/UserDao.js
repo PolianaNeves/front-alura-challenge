@@ -45,4 +45,42 @@ export class UserDao {
       };
     });
   }
+
+  countUsers() {
+    return new Promise((resolve, reject) => {
+      var request = this._connection
+        .transaction([this._store], "readonly")
+        .objectStore(this._store)
+        .count();
+
+      request.onsuccess = () => {
+        resolve(request.result);
+      };
+
+      request.onerror = (e) => {
+        console.log(e.target.error);
+        reject(e.target.error.name);
+      };
+    });
+  }
+
+  getFirstUser() {
+    return new Promise((resolve, reject) => {
+      let cursor = this._connection
+        .transaction([this._store], "readwrite")
+        .objectStore(this._store)
+        .openCursor();
+
+      cursor.onsuccess = (event) => {
+        let cursorUser = event.target.result;
+        if(cursorUser)
+          resolve(cursorUser.value);
+      };
+
+      cursor.onerror = (event) => {
+        console.log(event.target.error);
+        reject("Não foi possível obter o usuário");
+      };
+    });
+  }
 }
