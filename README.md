@@ -34,7 +34,7 @@ Users are capable to:
 
 ### Screenshot
 
-![](./public/print_home.png)
+![](./public/print_home.jpg)
 
 ### Links
 
