@@ -42,3 +42,17 @@ export const colors = [
     { hex: "#5081fb", rgb: "80, 129, 251" },
     { hex: "#051d3b", rgb: "5, 29, 59" },
 ];
+
+export const typographyTypes = [
+    { type: "Title", font: "Inter", weight: 700, fontSize: 21, lineHeight: "32px" },
+    { type: "Body", font: "Inter", weight: 400, fontSize: 16, lineHeight: "24px" },
+    {
+        type: "Sidebar Title",
+        font: "Inter",
+        fontWeight: 400,
+        fontSize: 12,
+        lineHeight: "18px",
+        letterSpacing: 0.4,
+        textTransform: "uppercase",
+    },
+];

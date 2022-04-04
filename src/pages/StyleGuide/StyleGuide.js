@@ -1,5 +1,6 @@
 import ColorCard from "../../components/ColorCard/ColorCard";
-import { colors } from "../../constants";
+import TypographyCard from "../../components/TypographyCard/TypographyCard";
+import { colors, typographyTypes } from "../../constants";
 import "./StyleGuide.css";
 
 export default function StyleGuide() {
@@ -15,6 +16,7 @@ export default function StyleGuide() {
             </div>
             <div>
                 <h1 className="title-font">Tipografia</h1>
+                <TypographyCard typographies={typographyTypes}/>
             </div>
             <div>
                 <h1 className="title-font">Sombras</h1>
