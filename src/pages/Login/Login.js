@@ -5,6 +5,7 @@ import { ConnectionFactory } from "../../services/ConnectionFactory";
 import { UserDao } from "../../dao/UserDao";
 import { UserContext } from "../../App";
 import { buttons } from '../../constants';
+import Button from "../../components/Button/Button";
 import "./Login.css";
 
 export default function Login() {
@@ -41,13 +42,11 @@ export default function Login() {
         value={userName}
         onChange={(e) => handleUserNameChange(e)}
       />
-      <button
-        type="button"
-        className="button-outlined button-outlined-font"
-        onClick={saveUser}
-      >
-        {buttons.logIn}
-      </button>
+      <Button
+        class="button-outlined button-outlined-font"
+        click={saveUser}
+        text={buttons.logIn}
+      />
     </section>
   );
 }
