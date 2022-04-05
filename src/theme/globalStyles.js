@@ -48,8 +48,7 @@ const GlobalStyle = createGlobalStyle`
     .hide-element{
         display: none;
     }
-    input,select,textarea{
-        background-color: var(--offset-white);
+    input,select,textarea {
         border: 0;
         border-radius: 5px;
         padding: 10px;
@@ -122,6 +121,10 @@ const GlobalStyle = createGlobalStyle`
     .comment-item, .favorite-item {
         color: var(--white);
     }
+    input,select,textarea,
+    .bg-offset-white, .comment-item:hover, .favorite-item:hover {
+        background-color: var(--offset-white);
+    }
     .title-font{
         height: 32px;
         font-family: Inter;
@@ -182,9 +185,6 @@ const GlobalStyle = createGlobalStyle`
         border-radius: 16px;
         background-color: var(--offset-white-hover-8); 
     }
-    .comment-item:hover, .favorite-item:hover{
-        background-color: var(--offset-white); 
-    } 
 `;
 
 export default GlobalStyle;
