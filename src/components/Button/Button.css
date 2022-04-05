@@ -1,9 +1,4 @@
 .button-filled-font {
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
     color: var(--dark-blue);
 }
 .button-filled {
@@ -24,27 +19,20 @@
 .button-filled:focus {
     background-color: var(--blue-100);
 }
-.button-outlined-font {
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-}
 .button-outlined {
-    background-color: rgba(80, 129, 251, 0.08);
+    background-color: var(--blue-300-8);
     padding: 16px;
     border: 0;
     border-radius: 8px;
 }
 .button-outlined:hover {
-    background-color: rgba(80, 129, 251, 0.16);
+    background-color: var(--blue-300-16);
 }
 .button-outlined:active {
-    background-color: rgba(80, 129, 251, 0.16);
-    border: 4px solid rgba(80, 129, 251, 0.24);
+    background-color: var(--blue-300-16);
+    border: 4px solid var(--blue-300-24);
     border-radius: 8px;
 }
 .button-outlined:focus {
-    background-color: rgba(80, 129, 251, 0.24);
+    background-color: var(--blue-300-24);
 }

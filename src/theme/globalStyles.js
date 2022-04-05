@@ -10,6 +10,9 @@ const GlobalStyle = createGlobalStyle`
         --text-color-light: #A3A3A3;
         --dark-blue: #051d3b;
         --blue-300: #5081fb;
+        --blue-300-8: rgba(80, 129, 251, 0.08);
+        --blue-300-16: rgba(80, 129, 251, 0.16);
+        --blue-300-24: rgba(80, 129, 251, 0.24);
         --blue-200: #7ba4fc;
         --blue-100: #96b9fd;
         --light-blue: #6bd1ff;
@@ -125,25 +128,23 @@ const GlobalStyle = createGlobalStyle`
     .bg-offset-white, .comment-item:hover, .favorite-item:hover {
         background-color: var(--offset-white);
     }
-    .title-font{
-        height: 32px;
+    .inter-font, .title-font, .body-font, .sidebar-title-font {
         font-family: Inter;
         font-style: normal;
+    }
+    .title-font{
+        height: 32px;
         font-weight: bold;
         font-size: 21px;
         line-height: 32px;
     }
-    .body-font{
-        font-family: Inter;
-        font-style: normal;
+    .body-font {
         font-weight: normal;
         font-size: 16px;
         line-height: 24px;
     }
-    .sidebar-title-font{
+    .sidebar-title-font {
         height: 18px;
-        font-family: Inter;
-        font-style: normal;
         font-weight: normal;
         font-size: 12px;
         line-height: 18px;
