@@ -57,7 +57,7 @@ function Navbar(props) {
                 <FontAwesomeIcon
                     id="search-icon"
                     icon={faSearch}
-                    className={"search-mobile-icon"}
+                    className={"color-white search-mobile-icon"}
                     onClick={() => animateSearchInput()}
                     size="2x"
                 />
@@ -65,7 +65,7 @@ function Navbar(props) {
             <FontAwesomeIcon
                 icon={menuIcon}
                 size="2x"
-                className={"mobile-bars"}
+                className={"color-white mobile-bars"}
                 onClick={() => animateSideMenu()}
             />
             <div className={"desktop-profile"}>

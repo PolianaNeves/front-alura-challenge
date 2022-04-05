@@ -50,7 +50,6 @@ const GlobalStyle = createGlobalStyle`
     }
     input,select,textarea{
         background-color: var(--offset-white);
-        color: var(--white);
         border: 0;
         border-radius: 5px;
         padding: 10px;
@@ -117,14 +116,19 @@ const GlobalStyle = createGlobalStyle`
     .text-center {
         text-align: center;
     }
+    input,select,textarea,
+    .color-white, .title-font, .body-font,
+    .sidebar-title-font, .primary-menu-item-icon,
+    .comment-item, .favorite-item {
+        color: var(--white);
+    }
     .title-font{
         height: 32px;
         font-family: Inter;
         font-style: normal;
         font-weight: bold;
         font-size: 21px;
-        line-height: 32px; 
-        color: var(--white);
+        line-height: 32px;
     }
     .body-font{
         font-family: Inter;
@@ -132,7 +136,6 @@ const GlobalStyle = createGlobalStyle`
         font-weight: normal;
         font-size: 16px;
         line-height: 24px;
-        color: var(--white);
     }
     .sidebar-title-font{
         height: 18px;
@@ -143,7 +146,6 @@ const GlobalStyle = createGlobalStyle`
         line-height: 18px;
         letter-spacing: 0.4em;
         text-transform: uppercase;
-        color: var(--white);
         margin-bottom: 16px;
     }
     .primary-menu-item{
@@ -151,8 +153,7 @@ const GlobalStyle = createGlobalStyle`
         align-items: center;
         flex-grow: 1;
     }
-    .primary-menu-item-icon{
-        color: var(--white);
+    .primary-menu-item-icon {
         background-color: rgba(80,129,251,0.16);
         border-radius: 16px;
         width: fit-content;
@@ -173,10 +174,9 @@ const GlobalStyle = createGlobalStyle`
     .primary-icon-opacity:active{
         opacity: 1;
     }
-    .comment-item, .favorite-item{
+    .comment-item, .favorite-item {
         padding: 8px;
         gap: 8px;
-        color: var(--white);
     }
     .comment-item:hover, .favorite-item:hover{
         border-radius: 16px;

@@ -61,7 +61,7 @@ export default function ProjectCard(props) {
           </div>
           {props.highlight ? (
             <CodeEditor
-              className={"grow-1 codebox-text"}
+              className={"grow-1 color-white codebox-text"}
               value={codeSnippet || ""}
               language={props.language}
               placeholder="Please enter your code."
@@ -76,7 +76,7 @@ export default function ProjectCard(props) {
             />
           ) : (
             <textarea
-              className={"grow-1 codebox-text"}
+              className={"grow-1 color-white codebox-text"}
               value={codeSnippet || ""}
               onChange={handleCodeChange}
             />

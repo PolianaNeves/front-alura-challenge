@@ -34,14 +34,7 @@
 .expand-btn {
     background-color: var(--mac-green);
 }
-.codebox-text-font {
-    font-family: Roboto Mono ;
-    font-style: normal ;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 18px ;
-    color: var(--white);
-}
+
 .codebox-text,
 .codebox-text:hover,
 .codebox-text:focus,
@@ -49,7 +42,6 @@
     background-color: var(--codebox-color);
     resize: none;
     margin: 24px 16px 16px 16px;
-    color: var(--white);
 }
 
 .codebox-text::-webkit-scrollbar {

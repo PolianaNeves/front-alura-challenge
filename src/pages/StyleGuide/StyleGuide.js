@@ -37,7 +37,7 @@ export default function StyleGuide() {
             </div>
             <div>
                 <h1 className="title-font">Form components</h1>
-                <div className="flex wrap gap-48 form-components-guide">
+                <div className="flex wrap gap-48 color-white">
                     <div className="flex column wrap gap-16">
                         Input de texto
                         <input
@@ -70,7 +70,7 @@ export default function StyleGuide() {
             <div>
                 <h1 className="title-font">Botões</h1>
                 <div className="flex wrap text-center buttons-guide">
-                    <div className="flex column wrap gap-16 buttons-guide-filled">
+                    <div className="flex column wrap gap-16 color-white">
                         Filled
                         <Button text={"Normal"} filled />
                         <Button
@@ -96,7 +96,7 @@ export default function StyleGuide() {
                             filled
                         />
                     </div>
-                    <div className="flex column wrap gap-16 buttons-guide-outlined">
+                    <div className="flex column wrap gap-16 color-white">
                         Outlined
                         <Button text={"Normal"} />
                         <Button
@@ -120,7 +120,7 @@ export default function StyleGuide() {
                             text={"Focus"}
                         />
                     </div>
-                    <div className="flex column wrap gap-16 align-center icon-button-guide">
+                    <div className="flex column wrap gap-16 align-center color-white">
                         Icon button
                         <FontAwesomeIcon
                             id="search-icon"
@@ -130,7 +130,7 @@ export default function StyleGuide() {
                         />
                         {/* TODO: Change icons to match style guide */}
                     </div>
-                    <div className="flex column wrap gap-16 align-center menu-item-guide">
+                    <div className="flex column wrap gap-16 align-center color-white">
                         Item de menu
                         <FontAwesomeIcon
                             id="search-icon"

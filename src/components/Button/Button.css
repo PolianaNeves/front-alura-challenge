@@ -8,7 +8,7 @@
 }
 .button-filled {
     background-color: var(--blue-300);
-    color: #000;
+    color: #000000 !important;
     padding: 16px;
     border-radius: 8px;
     border: 0;
@@ -30,11 +30,9 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
-    color: var(--white);
 }
 .button-outlined {
     background-color: rgba(80, 129, 251, 0.08);
-    color: var(--white);
     padding: 16px;
     border: 0;
     border-radius: 8px;

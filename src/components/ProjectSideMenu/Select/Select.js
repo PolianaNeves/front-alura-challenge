@@ -35,7 +35,7 @@ export default function Select(props) {
     }, [props.language, props.options])
 
     return (
-        <div className={"select"} style={props.style}>
+        <div className={"color-white select"} style={props.style}>
             <div className={"flex justify-between"}>
                 <input
                     disabled

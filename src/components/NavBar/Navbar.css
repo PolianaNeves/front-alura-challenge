@@ -44,7 +44,6 @@
 
 .search-mobile-icon {
     align-self: center;
-    color: var(--white);
 }
 
 .animate-search {
@@ -64,7 +63,6 @@
 
 .mobile-bars {
     align-self: center;
-    color: var(--white);
 }
 
 .mobile-side-menu {
