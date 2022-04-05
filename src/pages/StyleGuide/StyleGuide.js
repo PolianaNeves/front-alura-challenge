@@ -1,6 +1,10 @@
 import { colors, typographyTypes, shadow } from "../../constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import {
+    faBars,
+    faDotCircle,
+    faComment,
+} from "@fortawesome/free-solid-svg-icons";
 import ColorCard from "../../components/ColorCard/ColorCard";
 import TypographyCard from "../../components/TypographyCard/TypographyCard";
 import Select from "../../components/ProjectSideMenu/Select/Select";
@@ -127,6 +131,34 @@ export default function StyleGuide() {
                         />
                         {/* TODO: Change icons to match style guide */}
                     </div>
+                    <div className="menu-item-guide">
+                        Item de menu
+                        <FontAwesomeIcon
+                            id="search-icon"
+                            icon={faDotCircle}
+                            className={"primary-menu-item-icon"}
+                            size="2x"
+                        />
+                        <FontAwesomeIcon
+                            id="search-icon"
+                            icon={faDotCircle}
+                            style={{
+                                backgroundColor: "rgba(80,129,251,0.64)",
+                            }}
+                            className={"primary-menu-item-icon"}
+                            size="2x"
+                        />
+                        <FontAwesomeIcon
+                            id="search-icon"
+                            icon={faDotCircle}
+                            style={{
+                                backgroundColor: "var(--blue-300)",
+                            }}
+                            className={"primary-menu-item-icon"}
+                            size="2x"
+                        />
+                    </div>
+                    {/* TODO: Refactor and add comments,favorites and users */}
                 </div>
             </div>
             <div>
