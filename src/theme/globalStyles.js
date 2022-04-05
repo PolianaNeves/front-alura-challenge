@@ -115,10 +115,10 @@ const GlobalStyle = createGlobalStyle`
     .primary-icon-opacity:hover{        
         opacity: 0.80;
     }
-    .primary-menu-item-icon:pressed{
+    .primary-menu-item-icon:active{
         background-color: var(--blue-300);
     }
-    .primary-icon-opacity:pressed{
+    .primary-icon-opacity:active{
         opacity: 1;
     }
     .comment-item, .favorite-item{

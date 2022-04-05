@@ -1,6 +1,8 @@
+import { colors, typographyTypes, shadow } from "../../constants";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import ColorCard from "../../components/ColorCard/ColorCard";
 import TypographyCard from "../../components/TypographyCard/TypographyCard";
-import { colors, typographyTypes, shadow } from "../../constants";
 import Select from "../../components/ProjectSideMenu/Select/Select";
 import Button from "../../components/Button/Button";
 import "./StyleGuide.css";
@@ -114,6 +116,16 @@ export default function StyleGuide() {
                             }}
                             text={"Focus"}
                         />
+                    </div>
+                    <div className="icon-button-guide">
+                        Icon button
+                        <FontAwesomeIcon
+                            id="search-icon"
+                            icon={faBars}
+                            className={"primary-menu-item-icon"}
+                            size="2x"
+                        />
+                        {/* TODO: Change icons to match style guide */}
                     </div>
                 </div>
             </div>
