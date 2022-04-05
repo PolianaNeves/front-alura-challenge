@@ -2,6 +2,7 @@ import ColorCard from "../../components/ColorCard/ColorCard";
 import TypographyCard from "../../components/TypographyCard/TypographyCard";
 import { colors, typographyTypes, shadow } from "../../constants";
 import Select from "../../components/ProjectSideMenu/Select/Select";
+import Button from "../../components/Button/Button";
 import "./StyleGuide.css";
 
 export default function StyleGuide() {
@@ -34,7 +35,11 @@ export default function StyleGuide() {
                 <div className="form-components-guide">
                     <div className="input-guide">
                         Input de texto
-                        <input value={"Normal"} style={{padding: 16}} readOnly />
+                        <input
+                            value={"Normal"}
+                            style={{ padding: 16 }}
+                            readOnly
+                        />
                         <input
                             value={"Hover"}
                             style={{
@@ -59,6 +64,58 @@ export default function StyleGuide() {
             </div>
             <div>
                 <h1 className="title-font">Botões</h1>
+                <div className="buttons-guide">
+                    <div className="buttons-guide-filled">
+                        Filled
+                        <Button text={"Normal"} filled />
+                        <Button
+                            text={"Hover"}
+                            style={{
+                                backgroundColor: "var(--blue-200)",
+                            }}
+                            filled
+                        />
+                        <Button
+                            text={"Pressed"}
+                            style={{
+                                backgroundColor: "var(--blue-200)",
+                                border: "4px solid var(--blue-300)",
+                            }}
+                            filled
+                        />
+                        <Button
+                            style={{
+                                backgroundColor: "var(--blue-100)",
+                            }}
+                            text={"Focus"}
+                            filled
+                        />
+                    </div>
+                    <div className="buttons-guide-outlined">
+                        Outlined
+                        <Button text={"Normal"} />
+                        <Button
+                            text={"Hover"}
+                            style={{
+                                backgroundColor: "rgba(80, 129, 251, 0.16)",
+                            }}
+                        />
+                        <Button
+                            text={"Pressed"}
+                            style={{
+                                backgroundColor: "rgba(80, 129, 251, 0.16)",
+                                border: "4px solid rgba(80, 129, 251, 0.24)",
+                                borderRadius: "8px",
+                            }}
+                        />
+                        <Button
+                            style={{
+                                backgroundColor: "rgba(80, 129, 251, 0.24)",
+                            }}
+                            text={"Focus"}
+                        />
+                    </div>
+                </div>
             </div>
             <div>
                 <h1 className="title-font">Card do projeto</h1>
