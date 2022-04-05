@@ -3,7 +3,6 @@ import { Outlet } from "react-router";
 import { ConnectionFactory } from "./services/ConnectionFactory";
 import { UserDao } from "./dao/UserDao";
 import GlobalStyle from "./theme/globalStyles";
-import "./App.css";
 import "./theme/fonts.css";
 
 export const UserContext = createContext();
@@ -22,7 +21,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className='app'>
+    <div className='flex justify-center'>
       <GlobalStyle />
       <UserContext.Provider value={user}>
         <Outlet />

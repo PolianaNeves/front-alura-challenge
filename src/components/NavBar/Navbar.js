@@ -33,21 +33,21 @@ function Navbar(props) {
             setMenuIcon(faBars);
             setBarsActive(false);
         } else {
-            document.getElementById("side-menu").className = "mobile-side-menu";
+            document.getElementById("side-menu").className = "mobile-side-menu radius-8";
             setMenuIcon(faTimes);
             setBarsActive(true);
         }
     };
 
     return (
-        <nav className={"menu-bar"}>
+        <nav className={"flex align-center gap-10 menu-bar"}>
             <img
                 id="platform-logo"
                 alt="platform-logo"
                 src={logo}
                 className={"platform-logo"}
             />
-            <div className={"search-input-box"}>
+            <div className={"flex justify-center gap-10 search-input-box"}>
                 <input
                     type="text"
                     id="search-input"

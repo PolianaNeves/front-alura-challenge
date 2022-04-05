@@ -12,12 +12,6 @@ select:focus-visible {
     background-color: var(--offset-white-hover-24);
 }
 
-.placeholder {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-}
-
 .placeholder-input {
     background-color: transparent;
     border-radius: 0;
@@ -41,9 +35,6 @@ select:focus-visible {
 }
 
 .items {
-    display: flex;
-    flex-flow: column wrap;
-    gap: 10px;
     margin-top: 16px;
 }
 

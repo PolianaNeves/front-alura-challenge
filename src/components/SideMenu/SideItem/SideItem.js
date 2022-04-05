@@ -9,7 +9,7 @@ export default function SideItem(props) {
             <Link
                 to={props.item.routePath}
                 replace={isHome}
-                className={"primary-menu-item body-font"}
+                className={"flex primary-menu-item body-font"}
             >
                 <div
                     className={"primary-menu-item-icon"}

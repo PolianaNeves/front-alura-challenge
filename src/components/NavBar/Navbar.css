@@ -1,8 +1,4 @@
 .menu-bar {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    gap: 10px;
     margin-bottom: 40px;
 }
 
@@ -14,11 +10,7 @@
 
 .search-input-box {
     width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
     align-content: center;
-    gap: 10px;
 }
 
 .search-input {
@@ -81,6 +73,5 @@
     right: 0;
     background-color: #2d415b;
     padding: 24px;
-    border-radius: 8px;
     height: 100%;
 }

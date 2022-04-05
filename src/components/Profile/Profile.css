@@ -1,8 +1,4 @@
 .profile-box {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    gap: 10px;
     padding: 12px;
 }
 

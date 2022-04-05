@@ -63,6 +63,60 @@ const GlobalStyle = createGlobalStyle`
         background-color: var(--offset-white-hover-24); 
         outline: 0;
     }
+    .flex {
+        display: flex;
+    }
+    .column {
+        flex-direction: column;
+    }
+    .wrap {
+        flex-wrap: wrap;
+    }
+    .justify-center {
+        justify-content: center;
+    }
+    .justify-between {
+        justify-content: space-between;
+    }
+    .align-start {
+        align-items: flex-start;
+    }
+    .align-center {
+        align-items: center;
+    }
+    .grow-1 {
+        flex-grow: 1;
+    }
+    .gap-10 {
+        gap: 10px;
+    }
+    .gap-16 {
+        gap: 16px;
+    }
+    .gap-24 {
+        gap: 24px;
+    }
+    .gap-40 {
+        gap: 40px;
+    }
+    .gap-48 {
+        gap: 48px;
+    }
+    .radius-5 {
+        border-radius: 5px;
+    }
+    .radius-8 {
+        border-radius: 8px;
+    }
+    .mb-24{
+        margin-bottom: 24px;
+    }
+    .text-upper {
+        text-transform: uppercase;
+    }
+    .text-center {
+        text-align: center;
+    }
     .title-font{
         height: 32px;
         font-family: Inter;
@@ -93,8 +147,6 @@ const GlobalStyle = createGlobalStyle`
         margin-bottom: 16px;
     }
     .primary-menu-item{
-        display: flex;
-        flex-flow: row nowrap;
         gap: 16px;
         align-items: center;
         flex-grow: 1;
@@ -122,8 +174,6 @@ const GlobalStyle = createGlobalStyle`
         opacity: 1;
     }
     .comment-item, .favorite-item{
-        display: flex;
-        flex-flow: row nowrap;
         padding: 8px;
         gap: 8px;
         color: var(--white);

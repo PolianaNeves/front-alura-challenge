@@ -1,28 +1,19 @@
 .project-card {
     flex-grow: 2;
     background-color: rgba(0, 0, 0, 0.16);
-    border-radius: 8px;
 }
 
 .codebox-bg {
     background-color: var(--light-blue);
-    border-radius: 8px;
-    display: flex;
-    flex-flow: column nowrap;
     flex-grow: 2;
     padding: 24px;
 }
 .codebox {
     background-color: var(--codebox-color);
-    display: flex;
-    flex-flow: column nowrap;
-    border-radius: 8px;
     box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.24);
     flex-grow: inherit;
 }
 .codebox-options {
-    display: flex;
-    flex-flow: row nowrap;
     gap: 8px;
     margin: 16px 0px 0px 16px;
 }
@@ -58,7 +49,6 @@
     background-color: var(--codebox-color);
     resize: none;
     margin: 24px 16px 16px 16px;
-    flex-grow: 1;
     color: var(--white);
 }
 
@@ -78,8 +68,6 @@
 }
 
 .project-details {
-    display: flex;
-    flex-flow: column wrap;
     margin: 24px;
 }
 
@@ -98,16 +86,4 @@
     .codebox-bg {
         min-height: 288px;
     }
-}
-
-.community-reaction,
-.details-footer{
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-}
-
-.details-footer {
-    justify-content: space-between;
-    margin-bottom: 24px;
 }

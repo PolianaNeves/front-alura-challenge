@@ -71,9 +71,9 @@ export default function ProjectSideMenu(props) {
   };
 
   return (
-    <section className={"project-side-menu"}>
+    <section className={"flex column wrap gap-16"}>
       <h1 className={"sidebar-title-font"}>{sideMenuTitles.yourProject}</h1>
-      <div className={"project-fields"}>
+      <div className={"flex column wrap gap-16"}>
         <input
           className={"body-font"}
           aria-label="project-title"
@@ -94,7 +94,7 @@ export default function ProjectSideMenu(props) {
 
       <section className={"custom-options-section"}>
         <h1 className={"sidebar-title-font"}>{sideMenuTitles.customization}</h1>
-        <div className={"options-fields"}>
+        <div className={"flex column wrap gap-16"}>
           <Select
             options={languageOptions}
             placeholder={appPlaceholders.projectCustomization}

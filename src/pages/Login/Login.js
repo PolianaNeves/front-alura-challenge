@@ -35,7 +35,7 @@ export default function Login() {
   };
 
   return (
-    <section className="login-section">
+    <section className="flex column gap-16 login-section">
       <input
         type="text"
         placeholder="Digite seu nome..."

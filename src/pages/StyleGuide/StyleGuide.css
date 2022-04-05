@@ -1,60 +1,20 @@
-.style-guide-section, .shadow-guide, 
-.buttons-guide-filled, .buttons-guide-outlined,
-.select-guide, .input-guide, .icon-button-guide,
-.menu-item-guide
-{
-    display: flex;
-    flex-flow: column wrap;
-}
-
-.colors-guide-list, .input-guide, .select-guide,
-.buttons-guide-filled, .buttons-guide-outlined,
-.icon-button-guide, .menu-item-guide{
-    gap: 16px;
-}
-
 .form-components-guide, .buttons-guide-filled, 
 .buttons-guide-outlined, .icon-button-guide,
 .menu-item-guide {
     color: var(--white);
 }
 
-.style-guide-section {
-    gap: 48px;
-}
-
 .title-font {
     margin-bottom: 16px;
-}
-
-.colors-guide-list, .form-components-guide,
-.buttons-guide {
-    display: flex;
-    flex-flow: row wrap;
 }
 
 .shadow-guide {
     background-color: var(--white);
     padding: 32px;
-    border-radius: 8px;
     gap: 8px;
     width: fit-content;
 }
 
-.shadow-guide-axis {
-    display: flex;
-    justify-content: space-between;
-}
-
-.form-components-guide {
-    gap: 48px
-}
-
 .buttons-guide{
     gap: 32px;
-    text-align: center;
-}
-
-.icon-button-guide, .menu-item-guide {
-    align-items: center;
 }

@@ -4,10 +4,10 @@ import "./TypographyCard.css";
 
 export default function TypographyCard(props) {
     return (
-        <div className="typography-card">
+        <div className="flex column radius-8 typography-card">
             {props.typographies.map((typography, index) => {
                 return (
-                    <div key={index} className="typography-row">
+                    <div key={index} className="flex justify-between typography-row">
                         <span
                             style={{
                                 font: typography.font,
@@ -20,15 +20,15 @@ export default function TypographyCard(props) {
                         >
                             {typography.type}
                         </span>
-                        <div className="typography-config">
-                            <div className="typography-config-item">
+                        <div className="flex gap-40 align-center">
+                            <div className="flex gap-16">
                                 <FontAwesomeIcon
                                     icon={faTextHeight}
                                     style={{ width: 20 }}
                                 />
                                 <span>{typography.fontSize}px</span>
                             </div>
-                            <div className="typography-config-item">
+                            <div className="flex gap-16">
                                 <FontAwesomeIcon
                                     icon={faAlignLeft}
                                     style={{ width: 20 }}

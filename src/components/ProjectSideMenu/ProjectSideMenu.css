@@ -1,26 +1,7 @@
-.project-fields {
-    display: flex;
-    flex-flow: column wrap;
-    gap: 16px;
-}
-
 @media (max-height: 768px) {
     .project-side-menu {
         flex-grow: 2;
     }
-}
-
-.project-side-menu {
-    display: flex;
-    flex-flow: column wrap;
-    gap: 16px;
-}
-
-
-.options-fields {
-    display: flex;
-    flex-flow: column wrap;
-    gap: 16px;
 }
 
 @media (max-height: 768px) {

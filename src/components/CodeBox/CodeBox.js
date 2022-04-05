@@ -21,8 +21,8 @@ export default function CodeBox(props) {
     }
 
     return (
-        <section className={"codebox-section"}>
-            <div className={"code-editor-section"}>
+        <section className={"flex wrap align-start gap-40 grow-1"}>
+            <div className={"flex column gap-16 code-editor-section"}>
                 <div ref={exportProjectCard}>
                     <ProjectCard
                         readOnly={false}
@@ -48,7 +48,7 @@ export default function CodeBox(props) {
                     text={buttons.exportAsImage}
                 />
             </div>
-            <div className="side-menu-section">
+            <div className="grow-1">
                 <ProjectSideMenu
                     project={props.project}
                     onLanguageChange={getSelectedLanguage}

@@ -4,7 +4,7 @@ export default function Profile(props) {
     if (!props.user)
         return <div>No user found!</div>
     return (
-        <div className={"profile-box"}>
+        <div className={"flex align-center gap-10 profile-box"}>
             {props.user._photo && (
                 <img alt="profile-thumbnail" src={props.user._photo} />
             )}

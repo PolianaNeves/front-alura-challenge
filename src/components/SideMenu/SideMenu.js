@@ -27,9 +27,9 @@ const items = [
 
 export default function SideMenu(props) {
     return (
-        <div id="side-menu" className={"side-menu"}>
+        <div id="side-menu" className={"flex column wrap gap-10 side-menu"}>
             <h1 className={"sidebar-title-font"}>Menu</h1>
-            <ul className={"list-item"}>
+            <ul className={"flex column wrap align-start gap-16 list-item"}>
                 {items.map((item, index) => {
                     return (
                         <li key={index}>

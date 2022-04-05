@@ -47,21 +47,21 @@ export default function ProjectCard(props) {
   };
 
   return (
-    <section className={"project-card"} onClick={() => handleClick()}>
+    <section className={"radius-8 project-card"} onClick={() => handleClick()}>
       <div
         id="codebox-bg"
-        className={"codebox-bg"}
+        className={"flex column radius-8 codebox-bg"}
         style={{ backgroundColor: bgColor }}
       >
-        <div className={"codebox"}>
-          <div className={"codebox-options"}>
+        <div className={"flex column radius-8 codebox"}>
+          <div className={"flex codebox-options"}>
             <div className={"exit-btn"} />
             <div className={"minimize-btn"} />
             <div className={"expand-btn"} />
           </div>
           {props.highlight ? (
             <CodeEditor
-              className={"codebox-text"}
+              className={"grow-1 codebox-text"}
               value={codeSnippet || ""}
               language={props.language}
               placeholder="Please enter your code."
@@ -76,7 +76,7 @@ export default function ProjectCard(props) {
             />
           ) : (
             <textarea
-              className={"codebox-text"}
+              className={"grow-1 codebox-text"}
               value={codeSnippet || ""}
               onChange={handleCodeChange}
             />
@@ -84,18 +84,18 @@ export default function ProjectCard(props) {
         </div>
       </div>
       {props.project && props.communityPage && (
-        <div className="project-details">
+        <div className={"flex column wrap project-details"}>
           <h1 className={"title-font"}>{props.project.name}</h1>
           <p className={"body-font body-details-opacity"}>
             {props.project.description}
           </p>
-          <div className={"details-footer"}>
-            <div className="community-reaction">
-              <div className={"comment-item"}>
+          <div className={"flex align-center justify-between mb-24"}>
+            <div className="flex align-center">
+              <div className={"flex comment-item"}>
                 <FontAwesomeIcon icon={faComment} size="lg" />
                 <p className="body-font">9</p>
               </div>
-              <div className={"favorite-item"}>
+              <div className={"flex favorite-item"}>
                 <FontAwesomeIcon icon={faHeart} size="lg" />
                 <p className="body-font">9</p>
               </div>

@@ -14,7 +14,7 @@ export default function Select(props) {
             document.getElementById("items").className = "hide-items";
             setArrowDown(false);
         } else {
-            document.getElementById("items").className = "items";
+            document.getElementById("items").className = "flex column wrap gap-10 items";
             setArrowDown(true);
         }
     };
@@ -36,7 +36,7 @@ export default function Select(props) {
 
     return (
         <div className={"select"} style={props.style}>
-            <div className={"placeholder"}>
+            <div className={"flex justify-between"}>
                 <input
                     disabled
                     value={fieldLabel || chosen}

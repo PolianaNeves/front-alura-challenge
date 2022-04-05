@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faBars,
     faDotCircle,
-    faComment,
 } from "@fortawesome/free-solid-svg-icons";
 import ColorCard from "../../components/ColorCard/ColorCard";
 import TypographyCard from "../../components/TypographyCard/TypographyCard";
@@ -13,10 +12,10 @@ import "./StyleGuide.css";
 
 export default function StyleGuide() {
     return (
-        <section className="style-guide-section">
+        <section className="flex column wrap gap-48">
             <div>
                 <h1 className="title-font">Cores</h1>
-                <div className="colors-guide-list">
+                <div className="flex wrap justify-center gap-16">
                     {colors.map((color, index) => {
                         return <ColorCard key={index} color={color} />;
                     })}
@@ -28,8 +27,8 @@ export default function StyleGuide() {
             </div>
             <div>
                 <h1 className="title-font">Sombras</h1>
-                <div className="shadow-guide">
-                    <p className="shadow-guide-axis">
+                <div className="flex column wrap radius-8 shadow-guide">
+                    <p className="flex justify-between">
                         <span>X = {shadow.xAxis}</span>
                         <span>Y = {shadow.yAxis}</span>
                     </p>
@@ -38,8 +37,8 @@ export default function StyleGuide() {
             </div>
             <div>
                 <h1 className="title-font">Form components</h1>
-                <div className="form-components-guide">
-                    <div className="input-guide">
+                <div className="flex wrap gap-48 form-components-guide">
+                    <div className="flex column wrap gap-16">
                         Input de texto
                         <input
                             value={"Normal"}
@@ -55,7 +54,7 @@ export default function StyleGuide() {
                             readOnly
                         />
                     </div>
-                    <div className="select-guide">
+                    <div className="flex column wrap gap-16">
                         Select
                         <Select placeholder={"Normal"} readOnly />
                         <Select
@@ -70,8 +69,8 @@ export default function StyleGuide() {
             </div>
             <div>
                 <h1 className="title-font">Botões</h1>
-                <div className="buttons-guide">
-                    <div className="buttons-guide-filled">
+                <div className="flex wrap text-center buttons-guide">
+                    <div className="flex column wrap gap-16 buttons-guide-filled">
                         Filled
                         <Button text={"Normal"} filled />
                         <Button
@@ -97,7 +96,7 @@ export default function StyleGuide() {
                             filled
                         />
                     </div>
-                    <div className="buttons-guide-outlined">
+                    <div className="flex column wrap gap-16 buttons-guide-outlined">
                         Outlined
                         <Button text={"Normal"} />
                         <Button
@@ -121,7 +120,7 @@ export default function StyleGuide() {
                             text={"Focus"}
                         />
                     </div>
-                    <div className="icon-button-guide">
+                    <div className="flex column wrap gap-16 align-center icon-button-guide">
                         Icon button
                         <FontAwesomeIcon
                             id="search-icon"
@@ -131,7 +130,7 @@ export default function StyleGuide() {
                         />
                         {/* TODO: Change icons to match style guide */}
                     </div>
-                    <div className="menu-item-guide">
+                    <div className="flex column wrap gap-16 align-center menu-item-guide">
                         Item de menu
                         <FontAwesomeIcon
                             id="search-icon"
